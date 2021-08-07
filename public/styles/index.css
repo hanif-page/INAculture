@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/* variable */
+:root
+{
+    --white: #fff;
+    --black: #333;
+    --very-dark-green: #2B463A;
+    --dark-green: #3A906B;
+    --green: #47BE8B;
+    --light-green: #80C6A7;
+    --orange: #FFCD4B;
+    --blue: #3B73C8;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+ul, li 
+{
+    list-style: none;
+}
+
+/* padding for each big container */
+header, .mobileNav, main, footer 
+{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+header 
+{
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    height: 80px;
+    background: var(--dark-green);
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.headerContent 
+{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContent a 
+{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.headerContent .hamburger 
+{
+    cursor: pointer;
+}
+
+.headerContent .hamburger div 
+{
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+    background: var(--white);
+    transition: all .5s;
+}
+
+.headerContent .hamburger div:nth-child(1)
+{
+    transform-origin: 0 0;
+}
+
+.headerContent .hamburger div:nth-child(2)
+{
+    margin: 5px 0;
+}
+
+.headerContent .hamburger div:nth-child(3)
+{
+    transform-origin: 0 100%;
+}
+
+
+.headerContent .hamburger.openNav div:nth-child(1)
+{
+    transform: rotate(45deg) translateY(-15px) translateX(2px)
+}
+.headerContent .hamburger.openNav div:nth-child(2)
+{
+    transform: scale(0);
+    opacity: 0;
+    margin: 0;
+}
+.headerContent .hamburger.openNav div:nth-child(3)
+{
+    transform: rotate(-45deg) translateY(20px)
+}
+
+.mobileNav
+{
+    width: 100%;
+    height: 280px;
+    position: fixed;
+    z-index: 40;
+    display: block;
+    background: var(--dark-green);
+    text-transform: capitalize;
+    text-align: right;
+    transform: translateY(-200px);
+    transition: all 1.2s ease-out;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.mobileNav.openNav 
+{
+    transform: translateY(60px);
+}
+
+.mobileNav ul li 
+{
+    margin-top: 2.3rem;
+}
+
+.mobileNav ul li a
+{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.2em;
+    transition: all .3s;
+}
+
+.mobileNav ul li a:hover 
+{
+    color: var(--orange);
+}
+
+.mobileNav ul li:nth-child(3) a
+{
+    background: var(--white);
+    color: var(--dark-green);
+    padding: .3rem .6rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.mobileNav ul li:nth-child(3) a:hover 
+{
+    background: var(--dark-green);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.desktopNav 
+{
+    display: none;
+    text-transform: capitalize;
+}
+
+.desktopNav ul li:nth-child(3) a
+{
+    background: var(--white);
+    color: var(--dark-green);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all .5s;
+}
+
+.desktopNav ul li:nth-child(3) a:hover 
+{
+    background: var(--dark-green);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+footer 
+{
+    background: var(--light-green);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer h1
+{
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 32px;
+}
+
+footer h2 
+{
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* all anchor tags (link) */
+footer a 
+{
+    font-weight: 700;
+    color: var(--white);
+    transition: all .3s;
+}
+
+footer a:hover 
+{
+    color: var(--orange);
+}
+
+.middle 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* a space for each section */
+.middle .share, .middle .reachUs, .bottom
+{
+    margin-top: 3rem;
+}
+
+/* share list (wa, twt, and tele) */
+.middle .share ul
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* share list child */
+.middle .share ul li 
+{
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+/* space for each item inside .middle class */
+.middle .reachUs .social, .social ul
+{
+    margin-top: 1rem;
+}
+
+/* for the email */
+.middle .reachUs .social a 
+{
+    text-align: center;
+    display: block;
+}
+
+/* social media list */
+.middle .reachUs .social ul 
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* social media icon */
+.middle .reachUs .social ul li a i 
+{
+    font-size: 2.5em;
+}
+
+/* space between 3 social media list child */
+.middle .reachUs .social ul li:nth-child(2)
+{
+    margin: 0 1.5rem;
+}
+
+/* space between copyright and made with section */
+.bottom .copyright, .madeWith
+{
+    margin-top: .5rem;
+}
+
+/* copyright text */
+.bottom .copyright
+{
+    text-align: center;
+    color: var(--black);
+}
+
+/* copyright anchor tag */
+.bottom .copyright a
+{
+    font-weight: 700;
+    color: var(--black);
+}
+
+.bottom .copyright a:hover 
+{
+    color: var(--white);
+}
+
+/* madeWith text */
+.bottom .madeWith
+{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* indonesian flag */
+.bottom .madeWith img 
+{
+    position: relative;
+    top: 2px;
+}
+
+/* 576px above breakpoints (tablet) */
+@media screen and (min-width: 576px)
+{
+    footer h1 
+    {
+        font-size: 2.5em;
+    }
+
+    footer h2
+    {
+        font-size: 1.8em;
+    }
+
+    .bottom .madeWith, .bottom .copyright
+    {
+        font-size: 1.2em;
+    }
+
+}
+
+/* 768px above breakpoints (big tablet) */
+@media screen and (min-width: 768px)
+{
+    /* increase the left and right padding */
+    header, .mobileNav, main, footer
+    {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    } 
+
+    /* make the hamburger bar dissapear */
+    .hamburger 
+    {
+        display: none;
+    }
+
+    /* display the desktop nav */
+    .desktopNav 
+    {
+        display: block;
+        width: 50%;
+    }
+
+    /* list parent of the desktop nav */
+    .desktopNav ul 
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* desktop nav list child */
+    .desktopNav ul li a
+    {
+        transition: all .3s;
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    .desktopNav ul li a:hover
+    {
+        color: var(--orange);
+    } 
+
+    /* make the mobile nav dissapear */
+    .mobileNav
+    {
+        display: none;
+    }
+
+    /* change the layout of the middle section in the footer */
+    .middle 
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%
+    }
+
+    /* Share Our Platform */
+    .middle .share h2 
+    {
+        text-align: left;
+    }
+
+    /* Share list parent (wa, twt, and tele) | change the list layout */
+    .middle .share ul
+    {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 1rem 0;
+    }
+
+    /* make the list child don't have a margin */
+    .middle .share ul li
+    {
+        margin: 0;
+    }
+
+    /* add a space between 3 list child */
+    .middle .share ul li:nth-child(2)
+    {
+        margin: 0 2rem;
+    }
+
+    /* Reach Us On */
+    .middle .reachUs h2
+    {
+        text-align: right;
+    } 
+
+    /* email */
+    .middle .reachUs .social a 
+    {
+        text-align: right;
+    }
+
+    /* social media icon | make the position stick to the end */
+    .middle .reachUs .social ul 
+    {
+        justify-content: flex-end;
+    } 
+
+    /* space between 3 social media list child */
+    .middle .reachUs .social ul li:nth-child(2)
+    {
+        margin: 0 2rem;
+    }
+
+}
+
+/* 1024px above breakpoints (desktop) */
+@media screen and (min-width: 1024px)
+{
+    /* increase the left and right padding*/
+    header, .mobileNav, main, footer
+    {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    /* increase the desktop nav child font size */
+    .desktopNav ul li a
+    {
+        font-size: 1.2em;
+    }
+
+    /* increase the space between share list child */
+    .middle .share ul li:nth-child(2)
+    {
+        margin: 0 3rem;
+    }
+}

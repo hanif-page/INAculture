@@ -1,0 +1,282 @@
+/* variable */
+:root
+{
+    --white: #fff;
+    --black: #333;
+    --very-dark-green: #2B463A;
+    --dark-green: #3A906B;
+    --green: #47BE8B;
+    --light-green: #80C6A7;
+    --orange: #FFCD4B;
+    --blue: #3B73C8;
+
+}
+
+main 
+{
+    padding: 0;
+}
+
+main .hero 
+{
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../../assets/img/hero-bg.jpg);
+    background-position: center;
+    background-position-x: 45%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .hero h1 
+{
+    font-weight: 300;
+    color: var(--white);
+    text-transform: capitalize;
+    /* width: 80%; */
+    font-size: 2.5em;
+    text-align: center;
+}
+
+main .hero a 
+{
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: .5rem 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid var(--white);
+    transition: all .3s;
+    display: inline-block
+}
+
+main .hero a:hover 
+{
+    background: var(--very-dark-green);
+}
+
+main .hero a:active 
+{
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+main .aboutUs 
+{
+    min-height: 100vh;
+    background: var(--green);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 2rem;
+}
+
+main .aboutUs h1 
+{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 4rem;
+}
+
+.aboutUs h1, .aboutUs h2 
+{
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+.aboutUs h2 
+{
+    font-weight: 300;
+    font-size: 2.2em;
+    margin-bottom: .5rem;
+}
+
+.aboutUs p 
+{
+    width: 100%;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.aboutUs .siapaKami h2, .siapaKami p
+{
+    text-align: right;
+} 
+
+main .aboutUs .line 
+{
+    width: 100%;
+    border-bottom: 1px solid var(--white);
+    margin: 4rem 0;
+}
+
+main .data 
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.data .data-child 
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 24px;
+    transition: all 1s;
+    cursor: default;
+}
+
+.data .data-child:hover 
+{
+    box-shadow: 0 0 50px 2px rgba(0,0,0,.2);
+} 
+
+
+.data .data-child i 
+{
+    font-size: 6em;
+}
+
+.data .data-child p 
+{
+    text-align: center;
+    font-size: 2em;
+}
+
+.data .data-child p span 
+{
+    font-weight: 700;
+}
+
+.data .data-photos 
+{
+    color: var(--green);
+}
+
+.data .data-photographer
+{
+    color: var(--blue);
+} 
+
+.data .data-users
+{
+    color: var(--orange)
+}
+
+
+@media screen and (min-width: 576px)
+{
+    
+}
+
+@media screen and (min-width: 768px)
+{
+    main .hero
+    {
+        background-position-x: 1%;
+    }
+    
+    main .hero h1 
+    {
+        font-size: 3em;
+    }
+
+    main .hero a 
+    {
+        font-size: 1.8em;
+    }
+
+    main .aboutUs 
+    {
+        min-height: 50vh;
+    }
+
+    .aboutUs .container 
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .aboutUs .siapaKami, .aboutUs .tujuanKami
+    {
+        width: 45%;
+    }
+
+    .aboutUs .siapaKami h2, .siapaKami p
+    {
+        text-align: left;
+    }
+
+    .aboutUs .line 
+    {
+        display: none;
+    }
+
+    .aboutUs .tujuanKami h2, .tujuanKami p 
+    {
+        text-align: right;
+    }
+
+    main .data
+    {
+        min-height: 50vh;
+        flex-direction: row;
+    }
+
+    .data .data-child 
+    {
+        height: 15em;
+        width: 32%;
+        justify-content: flex-start;
+        padding: 1.5rem .5rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px)
+{
+    main .aboutUs 
+    {
+        min-height: 50vh;
+    }
+
+    .aboutUs .container 
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .aboutUs .line 
+    {
+        display: none;
+    }
+
+    main .data
+    {
+        min-height: 50vh;
+    }
+}
+
+@media screen and (min-width: 1280px)
+{
+    .aboutUs .siapaKami, .aboutUs .tujuanKami  
+    {
+        width: 35%;
+    }
+
+}

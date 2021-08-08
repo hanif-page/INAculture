@@ -1,0 +1,47 @@
+:root
+{
+    --white: #fff;
+    --black: #333;
+    --very-dark-green: #2B463A;
+    --dark-green: #3A906B;
+    --green: #47BE8B;
+    --light-green: #80C6A7;
+    --orange: #FFCD4B;
+    --blue: #3B73C8;
+
+}
+
+.loader 
+{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingSpin
+{
+    height: 50px;
+    width: 50px;
+    background: var(--black);
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    border-top: 5px solid var(--black);
+    animation: spin 1s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+@keyframes spin 
+{
+    0% 
+    {
+        transform: rotate(0);
+    }
+    100% 
+    {
+        transform: rotate(360deg);
+    }
+}

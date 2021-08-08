@@ -22,6 +22,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body 
+{
+    overflow: hidden;
+}
+
 a 
 {
     text-decoration: none;
@@ -33,10 +43,10 @@ ul, li
 }
 
 /* padding for each big container */
-header, .mobileNav, main, footer 
+header, .mobileNav, main, main .hero, main .aboutUs, main .data, footer 
 {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 
 header 
@@ -123,7 +133,7 @@ header
     text-transform: capitalize;
     text-align: right;
     transform: translateY(-200px);
-    transition: all 1.2s ease-out;
+    transition: all 1s ease-out;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -206,6 +216,7 @@ footer h1
     font-weight: 400;
     text-transform: capitalize;
     font-size: 32px;
+    text-align: center;
 }
 
 footer h2 
@@ -350,13 +361,6 @@ footer a:hover
 /* 768px above breakpoints (big tablet) */
 @media screen and (min-width: 768px)
 {
-    /* increase the left and right padding */
-    header, .mobileNav, main, footer
-    {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    } 
-
     /* make the hamburger bar dissapear */
     .hamburger 
     {
@@ -461,7 +465,7 @@ footer a:hover
 @media screen and (min-width: 1024px)
 {
     /* increase the left and right padding*/
-    header, .mobileNav, main, footer
+    header, .mobileNav, main, main .hero, main .aboutUs, main .data, footer 
     {
         padding-right: 4rem;
         padding-left: 4rem;

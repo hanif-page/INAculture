@@ -22,6 +22,7 @@ main h1
 main .join-us-card 
 {
     padding: 2.4rem 1.6rem;
+    width: 100%;
     margin: 6rem;
     background: var(--white);
     border-radius: 20px;
@@ -123,6 +124,7 @@ main .join-us-card .submit-box span
     main .join-us-card 
     {
         padding: 3.5rem 2.5rem;
+        width: 80%;
     }
 
     main .join-us-card h2

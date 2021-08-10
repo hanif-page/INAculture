@@ -21,7 +21,7 @@ main
 
 main h1 
 {
-    text-align: center;
+    text-align: left;
     color: var(--green);
     text-transform: capitalize;
     font-weight: 600;
@@ -187,7 +187,7 @@ transition: all .3s;
 {
 max-width: 90%;
 background: var(--white);
-height: 95vh;
+height: 80vh;
 position: relative;
 padding: 3rem 2px 2px 2px;
 border-radius: 5px;

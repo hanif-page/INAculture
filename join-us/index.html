@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../public/styles/index.css">
     <link rel="stylesheet" href="../public/styles/loader.css">
+    <link rel="stylesheet" href="../public/styles/join-us.css">
 </head>
 <body>
     <div class="loader">
@@ -17,9 +18,9 @@
 
     <header>
         <div class="headerContent">
-            <a href="">
-                <h1>INAculture</h1>
-            </a>
+            <h1>
+                <a href="../index.html">INAculture</a>
+            </h1>
 
             <div class="hamburger" onclick="hamburgerOpen()">
                 <div></div>
@@ -46,8 +47,42 @@
         </ul>
     </nav>
 
-    <main style="height: 100vh;">
+    <main>
+        <!-- <h1>join us</h1> -->
 
+        <div class="join-us-card">
+            <h2>daftar menjadi fotografer kami</h2>
+
+            <form action="">
+                <div class="input-box">
+                    <div class="divide-col">
+                        <div class="input-child input-nama">
+                            <input required type="text">
+                            <span class="placeholder">nama lengkap</span>
+                        </div>
+                        <div class="input-child input-umur">
+                            <input required type="text">
+                            <span class="placeholder">umur</span>
+                        </div>
+                    </div>
+                    <div class="divide-col">
+                        <div class="input-child input-email">
+                            <input required type="text">
+                            <span class="placeholder">email</span>
+                        </div>
+                        <div class="input-child input-nomor">
+                            <input required type="text">
+                            <span class="placeholder">social media (instagram)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit-box">
+                    <input type="submit" value="Daftar" class="submit-btn">
+                    <span>*kami akan kirimkan konfirmasi ke email yang dicantumkan.</span>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>

@@ -70,11 +70,11 @@ header
     justify-content: space-between;
 }
 
-.headerContent a 
+.headerContent h1 a
 {
-    color: var(--white);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1em;
+    color: var(--white);
 }
 
 .headerContent .hamburger 
@@ -385,6 +385,7 @@ footer a:hover
     .desktopNav ul li a
     {
         transition: all .3s;
+        color: var(--white);
         font-weight: 500;
         font-size: 1em;
     }
@@ -471,10 +472,9 @@ footer a:hover
         padding-left: 4rem;
     }
 
-    /* increase the desktop nav child font size */
-    .desktopNav ul li a
+    .desktopNav 
     {
-        font-size: 1.2em;
+        width: 40%;
     }
 
     /* increase the space between share list child */

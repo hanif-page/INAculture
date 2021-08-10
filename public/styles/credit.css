@@ -1,0 +1,9 @@
+footer .bottom .copyright a 
+{
+    color: var(--orange);
+}
+
+footer .bottom .copyright a:hover 
+{
+    color: var(--orange);
+}

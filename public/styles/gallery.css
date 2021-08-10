@@ -1,17 +1,3 @@
-/* variable */
-:root
-{
-    --white: #fff;
-    --black: #333;
-    --very-dark-green: #2B463A;
-    --dark-green: #3A906B;
-    --green: #47BE8B;
-    --light-green: #80C6A7;
-    --orange: #FFCD4B;
-    --blue: #3B73C8;
-
-}
-
 .desktopNav ul li:nth-child(3) a:hover 
 {
     border: none;
@@ -66,7 +52,7 @@ main .image-container-mobile
 main .image-container-mobile img 
 {
     width: 90%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     object-fit: cover;
 }
 
@@ -203,7 +189,6 @@ max-width: 90%;
 background: var(--white);
 height: 95vh;
 position: relative;
-margin: 0 1rem;
 padding: 3rem 2px 2px 2px;
 border-radius: 5px;
 }

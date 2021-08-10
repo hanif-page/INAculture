@@ -1,0 +1,188 @@
+main 
+{
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../../assets/img/hero-bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 
+{
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+main .join-us-card 
+{
+    padding: 2.4rem 1.6rem;
+    margin: 6rem;
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .join-us-card h2
+{
+    text-transform: capitalize;
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+
+main .join-us-card form 
+{
+    width: 100%;
+}
+
+main .join-us-card .input-box .input-child 
+{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+main .join-us-card .input-box .input-child input 
+{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--black);
+    padding: .25rem 0;
+    font-size: 1em;
+    transition: all .3s;
+}
+
+main .join-us-card .input-box .input-child input:focus 
+{
+    border-bottom: 2px solid var(--blue);
+}
+
+main .join-us-card .input-box .input-child span 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1em;
+    pointer-events: none;
+    text-transform: capitalize;
+    transition: all .5s;
+    color:#666;
+}
+
+main .join-us-card .input-box .input-child input:focus ~ span, 
+main .join-us-card .input-box .input-child input:valid ~ span
+{
+    top: -16px;
+    font-size: .8em;
+    color: var(--blue);
+}
+
+main .join-us-card .submit-box
+{
+    width: 100%;
+}
+
+main .join-us-card .submit-box .submit-btn 
+{
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    background: var(--blue);
+    color: var(--white);
+    padding: 10px 72px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+main .join-us-card .submit-box .submit-btn:hover 
+{
+    opacity: .8;
+}
+
+main .join-us-card .submit-box span 
+{
+    font-size: 12px;
+    color: var(--blue);
+}
+
+@media screen and (min-width: 450px)
+{
+    main .join-us-card 
+    {
+        padding: 3.5rem 2.5rem;
+    }
+
+    main .join-us-card h2
+    {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 576px)
+{
+    main .join-us-card 
+    {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    main 
+    {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+
+    main .join-us-card 
+    {
+        width: 75%;
+        margin: 0;
+    }
+
+    main .join-us-card .input-box 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main .join-us-card .input-box .divide-col
+    {
+        width: 47%;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    main .join-us-card
+    {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1280px)
+{
+    main
+    {
+        align-items: flex-start;
+    }
+
+    main .join-us-card
+    {
+        width: 50%;
+    }
+}

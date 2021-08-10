@@ -1,16 +1,3 @@
-:root
-{
-    --white: #fff;
-    --black: #333;
-    --very-dark-green: #2B463A;
-    --dark-green: #3A906B;
-    --green: #47BE8B;
-    --light-green: #80C6A7;
-    --orange: #FFCD4B;
-    --blue: #3B73C8;
-
-}
-
 .loader 
 {
     position: fixed;

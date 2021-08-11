@@ -125,7 +125,8 @@ header
 .mobileNav
 {
     width: 100%;
-    height: 280px;
+    min-height: 250px;
+    padding-bottom: 1.5rem;
     position: fixed;
     z-index: 40;
     display: block;
@@ -133,18 +134,18 @@ header
     text-transform: capitalize;
     text-align: right;
     transform: translateY(-200px);
-    transition: all 1s ease-out;
+    transition: all .5s ease-in-out;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 .mobileNav.openNav 
 {
-    transform: translateY(60px);
+    transform: translateY(64px);
 }
 
 .mobileNav ul li 
 {
-    margin-top: 2.3rem;
+    margin-top: 1.5rem;
 }
 
 .mobileNav ul li a
@@ -160,7 +161,7 @@ header
     color: var(--orange);
 }
 
-.mobileNav ul li:nth-child(3) a
+.mobileNav ul li:nth-child(4) a
 {
     background: var(--white);
     color: var(--dark-green);
@@ -170,7 +171,7 @@ header
     transition: all .3s;
 }
 
-.mobileNav ul li:nth-child(3) a:hover 
+.mobileNav ul li:nth-child(4) a:hover 
 {
     background: var(--dark-green);
     color: var(--white);
@@ -183,7 +184,7 @@ header
     text-transform: capitalize;
 }
 
-.desktopNav ul li:nth-child(3) a
+.desktopNav ul li:nth-child(4) a
 {
     background: var(--white);
     color: var(--dark-green);
@@ -193,7 +194,7 @@ header
     transition: all .5s;
 }
 
-.desktopNav ul li:nth-child(3) a:hover 
+.desktopNav ul li:nth-child(4) a:hover 
 {
     background: var(--dark-green);
     color: var(--white);
@@ -371,7 +372,7 @@ footer a:hover
     .desktopNav 
     {
         display: block;
-        width: 50%;
+        width: 60%;
     }
 
     /* list parent of the desktop nav */
@@ -474,7 +475,7 @@ footer a:hover
 
     .desktopNav 
     {
-        width: 40%;
+        width: 55%;
     }
 
     /* increase the space between share list child */

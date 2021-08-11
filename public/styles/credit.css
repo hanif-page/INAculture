@@ -16,14 +16,12 @@ main
     padding-top: 120px;
     padding-bottom: 100px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-main * 
+main > *
 {
     text-transform: capitalize;
+    margin-top: 3rem;
 }
 
 main a 
@@ -40,7 +38,7 @@ main a:hover
 
 main h1 
 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-align: center;
 }
 

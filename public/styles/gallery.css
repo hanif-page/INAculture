@@ -1,10 +1,10 @@
-.desktopNav ul li:nth-child(3) a:hover 
+.desktopNav ul li:nth-child(4) a:hover 
 {
     border: none;
     color: var(--dark-green);
 }
 
-.mobileNav ul li:nth-child(3) a:hover 
+.mobileNav ul li:nth-child(4) a:hover 
 {
     border: none;
     color: var(--dark-green);
@@ -24,7 +24,7 @@ main h1
     text-align: left;
     color: var(--green);
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.5em;
     margin: 2rem 0;
 }

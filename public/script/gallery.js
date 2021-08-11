@@ -11,7 +11,7 @@ var maxImageNumber = 18
 for(var i = minImageNumber; i <= maxImageNumber; i++)
 {
     var img = document.createElement('img')
-    var imgSrc = "../assets/img/" + i + ".jpg"
+    var imgSrc = "../assets/img4/" + i + ".jpg"
     img.src = imgSrc
     img.id = i
     img.setAttribute("onclick", "displayLightbox(this.id)") 
@@ -23,7 +23,7 @@ for(var i = minImageNumber; i <= maxImageNumber; i++)
 for(var i = minImageNumber; i <= maxImageNumber*1/2; i++)
 {
     var img = document.createElement('img')
-    var imgSrc = "../assets/img/" + i + ".jpg"
+    var imgSrc = "../assets/img4/" + i + ".jpg"
     img.src = imgSrc
     img.id = i
     img.setAttribute("onclick", "displayLightbox(this.id)") 
@@ -32,7 +32,7 @@ for(var i = minImageNumber; i <= maxImageNumber*1/2; i++)
 for(var i = maxImageNumber*1/2 + 1; i <= maxImageNumber; i++)
 {
     var img = document.createElement('img')
-    var imgSrc = "../assets/img/" + i + ".jpg"
+    var imgSrc = "../assets/img4/" + i + ".jpg"
     img.src = imgSrc
     img.id = i
     img.setAttribute("onclick", "displayLightbox(this.id)") 
@@ -45,7 +45,7 @@ for(var i = maxImageNumber*1/2 + 1; i <= maxImageNumber; i++)
 for(var i = minImageNumber; i <= maxImageNumber*1/3; i++)
 {
     var img = document.createElement('img')
-    var imgSrc = "../assets/img/" + i + ".jpg"
+    var imgSrc = "../assets/img4/" + i + ".jpg"
     img.src = imgSrc
     img.id = i
     img.setAttribute("onclick", "displayLightbox(this.id)") 
@@ -55,7 +55,7 @@ for(var i = minImageNumber; i <= maxImageNumber*1/3; i++)
 for(var i = maxImageNumber*1/3 + 1; i <= maxImageNumber*2/3; i++)
 {
     var img = document.createElement('img')
-    var imgSrc = "../assets/img/" + i + ".jpg"
+    var imgSrc = "../assets/img4/" + i + ".jpg"
     img.src = imgSrc
     img.id = i
     img.setAttribute("onclick", "displayLightbox(this.id)") 
@@ -65,7 +65,7 @@ for(var i = maxImageNumber*1/3 + 1; i <= maxImageNumber*2/3; i++)
 for(var i = maxImageNumber*2/3 + 1; i <= maxImageNumber; i++)
 {
     var img = document.createElement('img')
-    var imgSrc = "../assets/img/" + i + ".jpg"
+    var imgSrc = "../assets/img4/" + i + ".jpg"
     img.src = imgSrc
     img.id = i
     img.setAttribute("onclick", "displayLightbox(this.id)") 
@@ -110,7 +110,7 @@ function closeLightbox ()
 //   add or change the image that displayed on the lightbox
 function changeImage(currentIndex)
 {
-    var imageSrc = "../assets/img/" + currentIndex + ".jpg"
+    var imageSrc = "../assets/img4/" + currentIndex + ".jpg"
     var img = document.createElement("img")
     img.id = "displayedImage"
     img.src = imageSrc 

@@ -30,6 +30,7 @@ main .join-us-card
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    animation: card-in .5s ease-in;
 }
 
 main .join-us-card h2
@@ -186,5 +187,19 @@ main .join-us-card .submit-box span
     main .join-us-card
     {
         width: 50%;
+    }
+}
+
+@keyframes card-in 
+{
+    0%
+    {
+        opacity: .3;
+        transform: translateX(-16rem) scale(.8);
+    }
+    100% 
+    {
+        opacity: 1;
+        transform: translate(0) scale(1);
     }
 }

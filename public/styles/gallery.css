@@ -1,10 +1,10 @@
-.desktopNav ul li:nth-child(4) a:hover 
+.desktopNav ul li a#galleryNavChild:hover 
 {
     border: none;
     color: var(--dark-green);
 }
 
-.mobileNav ul li:nth-child(4) a:hover 
+.mobileNav ul li a#galleryNavChild:hover 
 {
     border: none;
     color: var(--dark-green);

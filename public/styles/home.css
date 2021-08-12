@@ -8,7 +8,6 @@ main .hero
     min-height: 100vh;
     background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../../assets/img3/hero-bg.jpg);
     background-position: center;
-    background-position-x: 45%;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -21,7 +20,6 @@ main .hero h1
     font-weight: 300;
     color: var(--white);
     text-transform: capitalize;
-    /* width: 80%; */
     font-size: 2.5em;
     text-align: center;
 }
@@ -31,8 +29,8 @@ main .hero a
     color: var(--white);
     text-transform: capitalize;
     font-size: 1.5em;
-    font-weight: 400;
-    padding: .5rem 1.5rem;
+    font-weight: 300;
+    padding: .75rem 1.5rem;
     margin-top: 1rem;
     border: 1px solid var(--white);
     transition: all .3s;
@@ -158,27 +156,11 @@ main .data
     color: var(--orange)
 }
 
-
-@media screen and (min-width: 576px)
-{
-    
-}
-
 @media screen and (min-width: 768px)
-{
-    main .hero
-    {
-        background-position-x: 1%;
-    }
-    
+{    
     main .hero h1 
     {
         font-size: 3em;
-    }
-
-    main .hero a 
-    {
-        font-size: 1.8em;
     }
 
     main .aboutUs 
@@ -235,6 +217,11 @@ main .data
 
 @media screen and (min-width: 1024px)
 {
+    main .hero a 
+    {
+        font-size: 1.8em;
+    }
+
     main .aboutUs 
     {
         min-height: 50vh;

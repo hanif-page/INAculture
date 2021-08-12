@@ -125,7 +125,7 @@ header
 .mobileNav
 {
     width: 100%;
-    min-height: 250px;
+    min-height: 200px;
     padding-bottom: 1.5rem;
     position: fixed;
     z-index: 40;
@@ -161,7 +161,7 @@ header
     color: var(--orange);
 }
 
-.mobileNav ul li:nth-child(4) a
+.mobileNav ul li a#galleryNavChild
 {
     background: var(--white);
     color: var(--dark-green);
@@ -171,7 +171,7 @@ header
     transition: all .3s;
 }
 
-.mobileNav ul li:nth-child(4) a:hover 
+.mobileNav ul li a#galleryNavChild:hover 
 {
     background: var(--dark-green);
     color: var(--white);
@@ -184,7 +184,7 @@ header
     text-transform: capitalize;
 }
 
-.desktopNav ul li:nth-child(4) a
+.desktopNav ul li a#galleryNavChild
 {
     background: var(--white);
     color: var(--dark-green);
@@ -194,7 +194,7 @@ header
     transition: all .5s;
 }
 
-.desktopNav ul li:nth-child(4) a:hover 
+.desktopNav ul li a#galleryNavChild:hover 
 {
     background: var(--dark-green);
     color: var(--white);
@@ -372,7 +372,7 @@ footer a:hover
     .desktopNav 
     {
         display: block;
-        width: 60%;
+        width: 50%;
     }
 
     /* list parent of the desktop nav */
@@ -475,7 +475,7 @@ footer a:hover
 
     .desktopNav 
     {
-        width: 55%;
+        width: 45%;
     }
 
     /* increase the space between share list child */

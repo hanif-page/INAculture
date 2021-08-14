@@ -163,19 +163,12 @@ header
 
 .mobileNav ul li a#galleryNavChild
 {
-    background: var(--white);
-    color: var(--dark-green);
-    padding: .3rem .6rem;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: all .3s;
-}
-
-.mobileNav ul li a#galleryNavChild:hover 
-{
-    background: var(--dark-green);
+    background: transparent;
     color: var(--white);
+    padding: .3rem .6rem;
+    border-radius: 5px;
     border: 1px solid var(--white);
+    transition: all .3s;
 }
 
 .desktopNav 
@@ -186,19 +179,19 @@ header
 
 .desktopNav ul li a#galleryNavChild
 {
-    background: var(--white);
-    color: var(--dark-green);
+    background: transparent;
+    color: var(--white);
     padding: .5rem 1rem;
-    border-radius: 10px;
-    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid var(--white);
     transition: all .5s;
 }
 
+.mobileNav ul li a#galleryNavChild:hover, 
 .desktopNav ul li a#galleryNavChild:hover 
 {
-    background: var(--dark-green);
-    color: var(--white);
-    border: 1px solid var(--white);
+    color: var(--orange);
+    border-color: var(--orange);
 }
 
 footer 

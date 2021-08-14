@@ -28,7 +28,7 @@ main .hero a
 {
     color: var(--white);
     text-transform: capitalize;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 300;
     padding: .75rem 1.5rem;
     margin-top: 1rem;
@@ -79,14 +79,16 @@ main .aboutUs h1
 {
     font-weight: 300;
     font-size: 2.2em;
-    margin-bottom: .5rem;
 }
 
 .aboutUs p 
 {
     width: 100%;
     font-weight: 700;
+    font-size: .8em;
     color: var(--white);
+    margin-top: 1rem;
+    line-height: 1.5;
 }
 
 .aboutUs .siapaKami h2, .siapaKami p
@@ -107,7 +109,7 @@ main .data
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -127,13 +129,14 @@ main .data
 
 .data .data-child i 
 {
-    font-size: 6em;
+    font-size: 5.5em;
+    margin-bottom: 1rem;
 }
 
 .data .data-child p 
 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .data .data-child p span 
@@ -165,7 +168,7 @@ main .data
 
     main .aboutUs 
     {
-        min-height: 50vh;
+        min-height: 60vh;
     }
 
     .aboutUs .container 
@@ -194,18 +197,22 @@ main .data
         text-align: right;
     }
 
+    .aboutUs p 
+    {
+        text-indent: 2rem;
+    }
+
     main .data
     {
-        min-height: 50vh;
+        min-height: 40vh;
         flex-direction: row;
     }
 
     .data .data-child 
     {
-        height: 15em;
-        width: 32%;
+        max-width: 25%;
         justify-content: flex-start;
-        padding: 1.5rem .5rem;
+        padding: 2rem 1.5rem;
     }
 
     .data .data-child:hover 
@@ -219,12 +226,12 @@ main .data
 {
     main .hero a 
     {
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 
     main .aboutUs 
     {
-        min-height: 50vh;
+        min-height: 60vh;
     }
 
     .aboutUs .container 
@@ -240,7 +247,7 @@ main .data
 
     main .data
     {
-        min-height: 50vh;
+        min-height: 40vh;
     }
 }
 
@@ -248,7 +255,19 @@ main .data
 {
     .aboutUs .siapaKami, .aboutUs .tujuanKami  
     {
-        width: 35%;
+        width: 45%;
     }
 
+    .aboutUs p 
+    {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    .data .data-child p
+    {
+        font-size: 1.8em;
+    }
 }

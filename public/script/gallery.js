@@ -5,7 +5,7 @@ const imageContainerDesktopColumn1 = document.querySelector("#col-desktop-1")
 const imageContainerDesktopColumn2 = document.querySelector("#col-desktop-2")
 const imageContainerDesktopColumn3 = document.querySelector("#col-desktop-3")
 var minImageNumber = 1
-var maxImageNumber = 18
+var maxImageNumber = 24
 
 // mobile gallery
 for(var i = minImageNumber; i <= maxImageNumber; i++)
@@ -78,8 +78,6 @@ const body = document.querySelector('body')
 const lightBoxTitle = document.querySelector(".lightboxTitle")
 const lightBox = document.querySelector(".lightbox")
 const lightBoxDisplay = document.querySelector('#display')
-var maxImageNumber = 18
-var minImageNumber = 1
 
 // initial image number
 var activeImageIndex
@@ -115,7 +113,7 @@ function changeImage(currentIndex)
     img.id = "displayedImage"
     img.src = imageSrc 
     lightBoxDisplay.appendChild(img)
-    var title = "Image " + currentIndex + " of " + maxImageNumber
+    var title = "Gambar ke-" + currentIndex + " dari " + maxImageNumber
     lightBoxTitle.innerHTML = title
 }
 

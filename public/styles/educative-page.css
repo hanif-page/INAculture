@@ -48,7 +48,7 @@ main p span
 main .arrow
 {
     font-size: 2.5em;
-    margin: 5rem 0;
+    margin: 4rem 0;
     display: block;
     text-align: center;
     color: var(--white);
@@ -78,7 +78,6 @@ main .arrow .fa-arrow-up
 
 .indonesiaText, .budayaIndonesiaText, .alamIndonesiaText
 {
-    animation: fade-in-left 1s ease-in;
     margin-bottom: 2rem;
 }
 
@@ -87,7 +86,6 @@ main .arrow .fa-arrow-up
     width: 100%;
     height: 50vh;
     border: 2px solid var(--white);
-    animation: fade-in 1s ease-in;
 }
 
 .imgContainer 
@@ -95,7 +93,6 @@ main .arrow .fa-arrow-up
     width: 100%;
     height: 50vh;
     position: relative;
-    animation: fade-in 1s ease-in;
 }
 
 .imgContainer h3 
@@ -181,6 +178,11 @@ main .source a
 
 @media screen and (min-width: 1024px)
 {
+    main 
+    {
+        padding-top: 0;
+    }
+
     main p 
     {
         text-indent: 2rem;
@@ -202,14 +204,28 @@ main .source a
     .indonesia, .budayaIndonesia, .alamIndonesia   
     {
         flex-direction: row;
-        align-items: flex-start;
-        scroll-margin-top: 8rem;
+        align-items: center;
+        scroll-margin-top: -2rem;
+        /* scroll-margin-top: 8rem; */
     } 
 
     .indonesiaText, .budayaIndonesiaText, .alamIndonesiaText, main .indonesia iframe, main .imgContainer
     {
         width: 48%;
         margin: 0
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    main h2 
+    {
+        font-size: 2.2em;
+    }
+
+    main p  
+    {
+        font-size: 1.2em;
     }
 }
 
@@ -251,30 +267,102 @@ main .source a
     }
 }
 
-@keyframes fade-in 
+/* animation after the page is loaded */
+.indonesia h2  
+{
+    animation: postloadAnimationTitle 1s;
+}
+
+.indonesia .paragraph
+{
+    animation: postloadAnimationParagraph 1s;
+}
+
+.indonesia iframe 
+{
+    animation: postloadAnimationMap 1s;
+}
+
+@keyframes postloadAnimationTitle 
 {
     0% 
     {
-        opacity: .3;
-        transform: scale(.8);
+        opacity: 0;
+        transform: translateX(-30px);
     }
     100%
     {
         opacity: 1;
-        transform: scale(1);
+        transform: translateX(0);
     }
 }
 
-@keyframes fade-in-left
+@keyframes postloadAnimationParagraph
 {
-    0% 
+    0%
     {
-        opacity: .8;
-        transform: scale(.8) translateX(-12rem);
+        opacity: 0;
+        transform: translateY(40px);
     }
     100%
     {
         opacity: 1;
-        transform: scale(1) translateX(0);
+        transform: translateY(0);
     }
 }
+
+@keyframes postloadAnimationMap
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* animation after the page is loaded */
+
+/* ANIMATE ON SCROLL */
+.aosText h2
+{
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 1s;
+}
+
+.aosText h2.animationScrolled 
+{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.aosText .paragraph
+{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s .75s;
+}
+
+.aosText .paragraph.animationScrolled
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imgContainer 
+{
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 1s 1s;
+}
+
+.imgContainer.animationScrolled
+{
+    opacity: 1;
+    transform: translateX(0);
+}
+/* ANIMATE ON SCROLL */

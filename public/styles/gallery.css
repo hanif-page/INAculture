@@ -17,19 +17,6 @@ main h1
     margin: 2rem 0;
 }
 
-main img 
-{
-    transition: all .5s;
-    cursor: pointer;
-    object-fit: cover;
-}
-
-main img:hover 
-{
-    opacity: .8;
-    transform: scale(1.03);
-}
-
 main .image-container-mobile
 {
     display: flex;
@@ -129,7 +116,7 @@ main .image-container-desktop
 {
     position: fixed;
     inset: 0;
-    z-index: 70;
+    z-index: 200;
     background: rgba(0,0,0,.8);
     color: var(--white);
     display: none;
@@ -293,3 +280,50 @@ main .image-container-desktop
     }
 }
 /* end -- lightbox and desktop gallery style */
+
+
+/* ANIMATE ON SCROLL */
+main .scrollMe 
+{
+    position: fixed;
+    z-index: 80;
+    inset: 0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid; */
+    /* place-items: center; */
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 5em;
+    font-weight: 700;
+    color: var(--black);
+}
+
+main img 
+{
+    opacity: .3;
+    transform: scale(.98);
+    transition: all 1s;
+}
+
+main img.animationScrolled
+{
+    opacity: 1;
+    transform: scale(1);
+}
+/* ANIMATE ON SCROLL */
+
+main img.animationScrolled 
+{
+    transition: all .5s;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+main img.animationScrolled:hover 
+{
+    opacity: .8;
+    transform: scale(1.03);
+}

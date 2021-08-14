@@ -39,7 +39,7 @@ main .hero a
 
 main .hero a:hover 
 {
-    background: var(--very-dark-green);
+    background: var(--dark-green);
 }
 
 main .hero a:active 
@@ -66,7 +66,7 @@ main .aboutUs h1
     text-align: center;
     font-weight: 500;
     font-size: 1.5em;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .aboutUs h1, .aboutUs h2 
@@ -139,9 +139,15 @@ main .data
     font-size: 1.5em;
 }
 
+.data .data-child p .block
+{
+    display: block;
+}
+
 .data .data-child p span 
 {
     font-weight: 700;
+    font-size: 1.2em;
 }
 
 .data .data-photos 
@@ -266,8 +272,78 @@ main .data
 
 @media screen and (min-width: 1440px)
 {
+    main .aboutUs 
+    {
+        scroll-margin-top: 0;
+    }
+
     .data .data-child p
     {
         font-size: 1.8em;
     }
 }
+
+/* ANIMATE ON SCROLL */
+.aboutUs .aboutUsTitle
+{
+    transition: all 1s .5s;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+
+.aboutUs .aboutUsTitle.animationScrolled
+{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.aboutUsContent 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.siapaKami
+{
+    transition-delay: 1s;
+}
+
+.tujuanKami 
+{
+    transition-delay: 1.5s;
+}
+
+.aboutUsContent.animationScrolled
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.line 
+{
+    opacity: .5;
+    transform: scale(0);
+    transition: all .5s 1.75s;
+}
+
+.line.animationScrolled 
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.data .fas 
+{
+    transition: all 1s;
+    opacity: 0;
+    transform: scale(.7);
+}
+
+.data .fas.animationScrolled
+{
+    opacity: 1;
+    transform: scale(1);
+}
+/* ANIMATE ON SCROLL */

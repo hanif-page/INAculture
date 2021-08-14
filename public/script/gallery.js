@@ -157,3 +157,42 @@ function previousImage ()
     else changeImage(activeImageIndex)
 }
 // (Lightbox Logic)
+
+
+// ANIMATE ON SCROLL 
+const aosImages = document.querySelectorAll("main img")
+const scrollMe = document.querySelector("main .scrollMe")
+
+// offset for customize on what height I want to make the animation active
+const elInView = (el, offset) => {
+    let elementTop = el.getBoundingClientRect().top; 
+    
+    // return true of false
+    return (
+        elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
+    )
+};
+
+const addAnimation = (el) => {
+    el.classList.add("animationScrolled")
+};
+
+const removeAnimation = (el) => {
+    el.classList.remove("animationScrolled")
+}
+
+const runAnimation = () => {
+   aosImages.forEach(aosImage => {
+       if(elInView(aosImage, 200))
+       {
+           addAnimation(aosImage)
+       }
+   })
+};
+
+window.addEventListener("scroll", () => {
+    runAnimation()
+
+    scrollMe.style.display = "none"
+});
+// ANIMATE ON SCROLL

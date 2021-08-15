@@ -8,13 +8,17 @@
     <title>INAculture | Credit</title>
     <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../public/styles/index.css">
-    <link rel="stylesheet" href="../public/styles/credit.css">
     <link rel="stylesheet" href="../public/styles/loader.css">
+    <link rel="stylesheet" href="../public/styles/credit.css">
 </head>
 <body>
     <div class="loader">
         <div class="loadingSpin"></div>
     </div>
+
+    <div class="background-animation"></div>
+    <div class="background-animation"></div>
+    <div class="background-animation"></div>
 
     <header>
         <div class="headerContent">
@@ -48,26 +52,75 @@
     </nav>
 
     <main>
-        <h1>credits</h1>
-
-        <div class="photosIcon">
-            <h3 class="photo">photos from <a href="https://unsplash.com/" class="unsplash" target="_blank">unsplash</a></h3>
-            <h3 class="icon">icon from <a href="https://fontawesome.com/" class="fontAwesome" target="_blank">font awesome</a></h3>
+        <div class="main-container container">
+            <div class="profile-card">
+                <div class="profile-card-child1">
+                    <div class="title-and-pict">
+                        <h1>
+                            creator profile
+                        </h1>
+        
+                        <img src="../assets/img4/mypict.png" alt="creator profile picture" class="profile-pict">
+                    </div>
+    
+                    <div class="caption">
+                        <h2>
+                            m. ammar hanif
+                        </h2>
+    
+                        <h3>
+                            have an interest in tech product
+                        </h3>
+                    </div>
+                </div>
+    
+                <div class="profile-card-child2">
+                    <p>
+                        Currently studying in one of the Senior High School in Jakarta.  
+                    </p>
+    
+                    <div class="profile-contact">
+                        <div class="social-media">
+                            <a href="https://github.com/hanif-page" target="_blank">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                            <a href="https://www.instagram.com/amrrhaniff/" target="_blank">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                        </div>
+    
+                        <div class="email">
+                            <a href="mailto:amrhanif15@gmail.com" target="_blank">email me!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="tools">
-            <h3>tools that i use</h3>
-            <ul>
-                <li><a href="https://www.figma.com/" target="_blank" class="figma">figma</a></li>
-                <li><a href="https://code.visualstudio.com/" target="_blank" class="vscode">VSCode</a></li>
-                <li><a href="https://www.google.com/search?channel=fs&client=ubuntu&q=html" target="_blank" class="html">HTML</a></li>
-                <li><a href="https://www.google.com/search?channel=fs&client=ubuntu&q=css" target="_blank" class="css">CSS</a></li>
-                <li><a href="https://www.javascript.com/" target="_blank" class="javascript">javascript</a></li>
-                <li><a href="https://www.google.com/search?channel=fs&client=ubuntu&q=web+browser" target="_blank" class="webBrowser">web browser</a></li>
-            </ul>
-        </div>
+        <div class="secondary-container container">
 
-        <div class="bigThanks">*Big thanks to all the source and tools above.</div>
+            <div class="photosIcon">
+                <h2>
+                    photos & icon sources
+                </h2>
+                <div>
+                    <a href="https://unsplash.com/" class="unsplash tools-name" target="_blank">unsplash.com</a>
+                    <a href="https://fontawesome.com/" class="fontAwesome tools-name" target="_blank">fontawesome.com</a>
+                </div>
+            </div>
+    
+            <div class="tools">
+                <h2>tools</h2>
+                <ul>
+                    <li><a href="https://www.figma.com/" target="_blank" class="figma tools-name">figma</a></li>
+                    <li><a href="https://code.visualstudio.com/" target="_blank" class="vscode tools-name">VSCode</a></li>
+                    <li><a href="https://www.google.com/search?channel=fs&client=ubuntu&q=html" target="_blank" class="html tools-name">HTML</a></li>
+                    <li><a href="https://www.google.com/search?channel=fs&client=ubuntu&q=css" target="_blank" class="css tools-name">CSS</a></li>
+                    <li><a href="https://www.javascript.com/" target="_blank" class="javascript tools-name">javascript</a></li>
+                    <li><a href="https://www.google.com/search?channel=fs&client=ubuntu&q=web+browser" target="_blank" class="webBrowser tools-name">web browser</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
 
 
@@ -107,7 +160,7 @@
 
         <div class="bottom">
             <div class="copyright">
-                Copyright 2021 <a href="https://inaculture.netlify.app">INAculture.</a> All rights reserved 
+                Copyright 2021 <a href="../">INAculture.</a> All rights reserved 
             </div>
             
             <div class="madeWith">
@@ -120,5 +173,6 @@
 
     <script src="../public/script/index.js"></script>
     <script src="../public/script/loader.js"></script>
+    <script src="../public/script/credit.js"></script>
 </body>
 </html>

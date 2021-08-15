@@ -10,70 +10,190 @@
     --webBrowser: #00ffc8;
 }
 
-main 
+.main-container
 {
     min-height: 100vh;
-    padding-top: 120px;
-    padding-bottom: 100px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-main > *
+.secondary-container
 {
-    text-transform: capitalize;
-    margin-top: 3rem;
-}
-
-main a 
-{
-    transition: all .3s;
-    font-weight: 700;
-}
-
-main a:hover 
-{
-    opacity: .5;
-    text-decoration: underline;
-}
-
-main h1 
-{
-    font-size: 1.5em;
+    padding: 2rem 0;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-main h1, main h3, main > div
+.profile-card
 {
+    width: 100%;
+    min-height: 300px;
+    box-shadow: 0 0 30px rgba(0,0,0,.30);
+    border-radius: 20px;
+}
+
+.profile-card-child1, .profile-card-child2
+{
+    padding: 1.5rem;
+}
+
+.profile-card-child1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-card-child2
+{
+    background: var(--black);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile-card-child2 p
+{
+    text-align: center;
+    color: var(--white);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.title-and-pict
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-and-pict h1
+{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.3em;
     color: var(--black);
+}
+
+.title-and-pict .profile-pict 
+{
+    width: 120px;
+    height: 120px;
+    object-position: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1.2rem;
+    background: var(--orange);
+}
+
+.caption 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.caption h2 
+{
     font-weight: 500;
-}
-
-main .photosIcon h3 
-{
-    margin-top: 1.5rem;
+    text-transform: capitalize;
     font-size: 1.2em;
+    margin-bottom: .3rem;
+    color: var(--black);
 }
 
-main .tools h3 
+.caption h3
 {
-    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: .8em;
 }
 
-main .tools ul li 
+.profile-contact 
 {
-    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 }
 
-main .tools ul li a
+.social-media a .fab
 {
-    font-size: 1.2em;
+    color: var(--white);
+    font-size: 2.5em;
+    margin: 0 .4rem;
+    transition: color .5s;
 }
 
-main .bigThanks 
+.social-media a:hover .fab
 {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    color: var(--orange);
+}
+
+.profile-contact .email 
+{
+    margin-top: .8rem;
+}
+
+.profile-contact .email a
+{
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: capitalize;
+    transition: color .5s;
+    display: inline-block;
+}
+
+.profile-contact .email a:hover 
+{
+    color: var(--orange);
+}
+
+.photosIcon 
+{
+    margin-bottom: 2.5rem;
+}
+
+.photosIcon div 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.photosIcon h2, .tools h2 
+{
+    color: var(--green);
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    font-size: 1.4em;
+}
+
+.tools a 
+{
+    text-transform: capitalize;
+}
+
+a.tools-name 
+{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+a.tools-name:hover 
+{
+    text-decoration: underline;
 }
 
 .unsplash 
@@ -126,32 +246,72 @@ footer .bottom .copyright a:hover
     color: var(--orange);
 }
 
-@media screen and (min-width: 640px)
+@media screen and (max-height: 729px)
 {
-    main .photosIcon h3
+    .profile-card 
     {
-        text-align: center;
+        margin-top: 100px;
     }
+}
 
-    main 
+@media screen and (min-width: 400px)
+{
+    .profile-card 
     {
-        justify-content: space-evenly;
+        width: 80%;
     }
+}
 
-    .tools h3 
+@media screen and (min-width: 576px)
+{
+    .profile-card
     {
-        margin-bottom: 1rem;
-    }
-
-    .tools ul 
-    {
-        display: flex;
-        justify-content: space-between;
+        width: 55%;
     }
 }
 
 @media screen and (min-width: 768px)
-{
+{       
+    main .main-container, main .secondary-container 
+    {
+        min-height: 50vh;
+        margin-bottom: 2rem;
+    }
+
+    .profile-card
+    {
+        display: flex;
+        width: 75%;
+        margin-top: 120px;
+    }
+
+    .profile-card-child1
+    {
+        width: 50%;
+    }
+
+    .profile-card-child2
+    {
+        border-radius: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .profile-card-child2 p
+    {
+        text-align: left;
+    }
+
+    .profile-contact
+    {
+        align-items: flex-end;
+    }
+
     main .photosIcon h3, main .tools h3 
     {
         font-size: 2em;
@@ -163,10 +323,101 @@ footer .bottom .copyright a:hover
     }
 }
 
+@media screen and (min-width: 1024px)
+{
+    .profile-card
+    {
+        width: 60%
+    }
+}
+
 @media screen and (min-width: 1280px)
 {
-    main .tools ul li a 
+    main .main-container
     {
-        font-size: 2.5em;
+        min-height: 70vh;
     }
+
+    main .secondary-container
+    {
+        min-height: 30vh;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .tools-name 
+    {
+        margin: 0;
+    }
+
+    .photosIcon 
+    {
+        align-items: flex-start;
+    }
+
+    .photosIcon h2 
+    {
+        text-align: left;
+    }
+
+    .photosIcon div 
+    {
+        flex-direction: row;
+    }
+
+    .photosIcon a 
+    {
+        margin-right: 1.2rem;
+    }
+
+    .tools h2 
+    {
+        text-align: right;
+    }
+
+    .tools ul 
+    {
+        display: flex;
+    }
+
+    .tools ul li 
+    {
+        margin-left: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    .profile-card
+    {
+        width: 45%;
+    }
+}
+
+/* animation */
+.profile-card
+{
+    /* shadow animation */
+    animation: profileCardAnimation 5s infinite;
+}
+
+@keyframes profileCardAnimation {
+    0%{}
+    50%{box-shadow: 0 0 50px rgba(0,0,0,.50);}
+    100%{}
+}
+
+/* ANIMATE ON SCROLL */
+.tools-name 
+{
+    transition: all 1.5s;
+    opacity: 0;
+    transform: translateY(1.5rem);
+}
+
+.tools-name.animationScrolled
+{
+    opacity: 1;
+    transform: translateY(0);
 }

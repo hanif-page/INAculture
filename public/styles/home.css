@@ -202,12 +202,7 @@ main .data
     {
         text-align: right;
     }
-
-    .aboutUs p 
-    {
-        text-indent: 2rem;
-    }
-
+    
     main .data
     {
         min-height: 40vh;

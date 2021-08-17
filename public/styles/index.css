@@ -43,7 +43,7 @@ ul, li
 }
 
 /* padding for each big container */
-header, .mobileNav, main, main .hero, main .aboutUs, main .data, footer 
+header, .mobileNav, main, main .hero, main .aboutUs, main .data, main .whatTheySay, footer 
 {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -461,7 +461,7 @@ footer a:hover
 @media screen and (min-width: 1024px)
 {
     /* increase the left and right padding*/
-    header, .mobileNav, main, main .hero, main .aboutUs, main .data, footer 
+    header, .mobileNav, main, main .hero, main .aboutUs, main .data, main .whatTheySay, footer 
     {
         padding-right: 4rem;
         padding-left: 4rem;

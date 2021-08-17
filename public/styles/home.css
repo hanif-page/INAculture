@@ -165,6 +165,143 @@ main .data
     color: var(--orange)
 }
 
+.whatTheySay 
+{
+    margin: 2rem auto;
+    min-height: 100vh;
+    scroll-margin-top: 7rem;
+}
+
+.whatTheySay h1 
+{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+    color: var(--green);
+}
+
+.container-mobile 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container-tablet 
+{
+    display: none;  
+}
+
+.container-desktop 
+{
+    display: none; 
+}
+
+.card-flex 
+{
+    width: 100%;
+    max-height: 300px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 20px;
+    box-shadow: 0 0 16px rgba(0,0,0,.24);
+    margin-bottom: 3rem;
+    cursor: default;
+}
+
+.card-flex:hover 
+{
+    box-shadow: 0 0 24px rgba(0,0,0,.48);
+}
+
+.card-flex .top-section, 
+.card-flex .bottom-section
+{
+    padding: 24px;
+    width: 100%;
+}
+
+.card-flex .top-section
+{
+    color: #333;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    grid-row: span 3 / span 3;
+}
+
+.card-flex .top-section .profilePict
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.card-flex .top-section .caption h2 
+{
+    font-weight: 600;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.card-flex .top-section .caption h3 
+{
+    font-weight: 300;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.card-flex .bottom-section
+{
+    background: var(--dark-green);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 3 / span 3;
+}
+
+.card-flex .bottom-section p
+{
+    width: 100%;
+    color: white;
+    font-size: .85em;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media screen and (min-width: 640px)
+{
+    .container-mobile
+    {
+        display: none;
+    }
+    .container-tablet 
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .container-tablet > *
+    {
+        width: 45%;
+    }
+}
+
 @media screen and (min-width: 768px)
 {    
     main .hero h1 
@@ -250,6 +387,23 @@ main .data
     {
         min-height: 40vh;
     }
+
+    .container-tablet
+    {
+        display: none;
+    }
+
+    .container-desktop
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .container-desktop > * 
+    {
+        width: 30%;
+    }
 }
 
 @media screen and (min-width: 1280px)
@@ -260,6 +414,11 @@ main .data
     }
 
     .aboutUs p 
+    {
+        font-size: 1em;
+    }
+
+    .card-flex .bottom-section p
     {
         font-size: 1em;
     }
@@ -340,5 +499,31 @@ main .data
 {
     opacity: 1;
     transform: scale(1);
+}
+
+.whatTheySay h1 
+{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s;
+}
+
+.whatTheySay h1.animationScrolled
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-flex 
+{   
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s;
+}
+
+.card-flex.animationScrolled
+{   
+    opacity: 1;
+    transform: translateY(0);
 }
 /* ANIMATE ON SCROLL */

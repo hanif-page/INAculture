@@ -1,9 +1,106 @@
+// GENERATING WHAT THEY SAY CARD
+const containerMobile1 = document.querySelector(".container-mobile")
+const containerTablet1 = document.querySelector(".container-tablet .col-1")
+const containerTablet2 = document.querySelector(".container-tablet .col-2")
+const containerDesktop1 = document.querySelector(".container-desktop .col-1")
+const containerDesktop2 = document.querySelector(".container-desktop .col-2")
+const containerDesktop3 = document.querySelector(".container-desktop .col-3")
+const minCard = 1
+const maxCard = 6
+
+const nameList = ['regina Sujowo', 'michael putra','gani m. juan', 'jaki susanto', 'm. randy pratama', 'patricia welina']
+const ageLocationList = ['17, surabaya', '20, DKI jakarta', '19, padang', '25, balikpapan', '15, jayapura', '23, bandung']
+const wordToSayList = ['Cukup bermanfaat platformnya', 'Nice concept, I love it. Mungkin bakal ngerekomendasiin temen buat cek platform ini', 'Platform yang bagus, memotivasi saya menjadi lebih semangat dalam menjalankan pekerjaan saya saat ini', 'Tempat yang bagus untuk menyalurkan hasil jepretan saya', 'Terima Kasih. Karena platform ini, hasil foto saya tidak tersimpan begitu saja. Tetapi bisa dibagikan pada tempatnya', 'Hatur Nuhun buat foundernya']
+
+// make card function
+const createCard = (index, device) => {
+    
+    // make topSection element and add class
+    const topSection = document.createElement("div")
+    topSection.classList.add("top-section")
+
+    // make profilePict element and add class
+    const profilePict = document.createElement("img")
+    profilePict.classList.add("profilePict")
+    profilePict.src = "assets/profile-pict/" + index + ".jpg"
+    profilePict.alt = "Photographer Profile Picture"
+
+    // make caption element and add class
+    const caption = document.createElement("div")
+    caption.classList.add("caption")
+
+    // caption child element
+    const captionName = document.createElement("h2")
+    captionName.innerHTML = nameList[index - 1]
+    const captionAgeLocation = document.createElement("h3")
+    captionAgeLocation.innerHTML = ageLocationList[index - 1]
+
+    // appending all the caption child element
+    caption.appendChild(captionName)
+    caption.appendChild(captionAgeLocation)
+
+    // appending top section child
+    topSection.appendChild(profilePict)
+    topSection.appendChild(caption)
+
+    // make bottomSection element and add class
+    const bottomSection = document.createElement("div")
+    bottomSection.classList.add("bottom-section")
+
+    // make text element, and append a text inside it
+    const wordToSay = document.createElement("p")
+    wordToSay.innerHTML = '" ' + wordToSayList[index - 1] + ' "'
+    bottomSection.appendChild(wordToSay)
+
+    // MAKE CARD ELEMENT AND ADD CLASS
+    const card = document.createElement("div")
+    card.classList.add("card-flex")
+
+    // APPEND ALL CARD CHILD ELEMENT
+    card.appendChild(topSection)
+    card.appendChild(bottomSection)
+
+    // append the card to each container
+    if (device === "mobile") containerMobile1.appendChild(card)
+    else if (device === "tablet1") containerTablet1.appendChild(card)
+    else if (device === "tablet2") containerTablet2.appendChild(card)
+    else if (device === "desktop1") containerDesktop1.appendChild(card)   
+    else if (device === "desktop2") containerDesktop2.appendChild(card)   
+    else if (device === "desktop3") containerDesktop3.appendChild(card)   
+    else console.error("ERR : unknown device argument createCard()")
+}
+
+// MOBILE CARD
+for(var i = minCard; i <= maxCard; i++) {createCard(i, "mobile")}
+
+// TABLET CARD
+for (var i = minCard; i <= maxCard; i++)
+{
+    if(i <= maxCard/2) createCard(i, "tablet1")
+    else if (i > maxCard/2 && i <= maxCard ) createCard(i, "tablet2")
+    else console.error("ERR : while generating tablet card")
+}
+
+// DESKTOP CARD 
+for (var i = minCard; i <= maxCard; i++)
+{
+    if(i <= maxCard/3) createCard(i, "desktop1")
+    else if (i > maxCard/3 && i <= maxCard*2/3) createCard(i, "desktop2")
+    else if (i > maxCard*2/3 && i <= maxCard) createCard(i, "desktop3")
+    else console.error("ERR : while generating desktop card")
+}
+
+
+
+// ANIMATE ON SCROLL
 const aboutUsTitle = document.querySelector(".aboutUs .aboutUsTitle")
 const aboutUsContents = document.querySelectorAll(".aboutUs .aboutUsContent")
 const aboutUsLine = document.querySelector(".aboutUs .line")
 const dataChilds = document.querySelectorAll(".data .data-child")
 const dataIcons = document.querySelectorAll(".data .fas")
 const dataNumberElements = document.querySelectorAll(".data .data-number")
+const whatTheySayTitle = document.querySelector(".whatTheySay h1")
+const cardsFlex = document.querySelectorAll(".card-flex")
 
 // offset for customize on what height I want to make the animation active
 const elInView = (el, offset) => {
@@ -32,6 +129,10 @@ const runAnimation = () => {
     {
         addAnimation(aboutUsLine)
     }
+    if (elInView(whatTheySayTitle, 100))
+    {
+        addAnimation(whatTheySayTitle)
+    }
     aboutUsContents.forEach(aboutUsContent => {
         if(elInView(aboutUsContent, 100)){
             addAnimation(aboutUsContent)
@@ -48,6 +149,13 @@ const runAnimation = () => {
     dataNumberElements.forEach(dataNumber => {
         if(elInView(dataNumber, 0)){
             addAnimation(dataNumber)
+        }
+    })
+    
+    cardsFlex.forEach(cardFlex => {
+        if(elInView(cardFlex, 200))
+        {
+            addAnimation(cardFlex)
         }
     })
 };

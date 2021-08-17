@@ -125,6 +125,12 @@ main .source a
     text-decoration: underline;
     color: var(--white);
     font-weight: 700;
+    transition: color .3s;
+}
+
+main .source a:hover 
+{
+    color: var(--orange);
 }
 
 @media screen and (max-width: 576px)

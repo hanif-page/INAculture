@@ -1,3 +1,4 @@
+// GENERATING IMAGE GALLERY
 const imageContainerMobile = document.querySelector("#imageContainerMobile")
 const imageContainerTabletColumn1 = document.querySelector("#imageContainerTablet #col-1")
 const imageContainerTabletColumn2 = document.querySelector("#imageContainerTablet #col-2")
@@ -7,72 +8,49 @@ const imageContainerDesktopColumn3 = document.querySelector("#col-desktop-3")
 var minImageNumber = 1
 var maxImageNumber = 24
 
-// mobile gallery
-for(var i = minImageNumber; i <= maxImageNumber; i++)
-{
-    var img = document.createElement('img')
-    var imgSrc = "../assets/img4/" + i + ".jpg"
+// GENERATE IMAGE FUNCTION 
+const generateImage = (index, device) => {
+    const img = document.createElement('img')
+    const imgSrc = "../assets/img4/" + index + ".jpg"
+    const imgAlt = "Indonesian Culture or Nature Photos"
     img.src = imgSrc
-    img.id = i
-    img.setAttribute("onclick", "displayLightbox(this.id)") 
-    imageContainerMobile.appendChild(img)
-
+    img.id = index
+    img.alt = imgAlt
+    img.setAttribute("onclick", "displayLightbox(this.id)")
+    
+    // what type is the device
+    if(device === "mobile") imageContainerMobile.appendChild(img)
+    else if(device === "tabletCol1") imageContainerTabletColumn1.appendChild(img)
+    else if(device === "tabletCol2") imageContainerTabletColumn2.appendChild(img)
+    else if(device === "desktopCol1") imageContainerDesktopColumn1.appendChild(img)
+    else if(device === "desktopCol2") imageContainerDesktopColumn2.appendChild(img)
+    else if(device === "desktopCol3") imageContainerDesktopColumn3.appendChild(img)
+    else console.error("ERR : unknown device argument generateImage()")
 }
+
+// mobile gallery
+for(var i = minImageNumber; i <= maxImageNumber; i++) generateImage(i, "mobile")
 
 // tablet gallery
-for(var i = minImageNumber; i <= maxImageNumber*1/2; i++)
+for(var i = minImageNumber; i <= maxImageNumber; i++)
 {
-    var img = document.createElement('img')
-    var imgSrc = "../assets/img4/" + i + ".jpg"
-    img.src = imgSrc
-    img.id = i
-    img.setAttribute("onclick", "displayLightbox(this.id)") 
-    imageContainerTabletColumn1.appendChild(img)
-}
-for(var i = maxImageNumber*1/2 + 1; i <= maxImageNumber; i++)
-{
-    var img = document.createElement('img')
-    var imgSrc = "../assets/img4/" + i + ".jpg"
-    img.src = imgSrc
-    img.id = i
-    img.setAttribute("onclick", "displayLightbox(this.id)") 
-    imageContainerTabletColumn2.appendChild(img)
+    if(i <= maxImageNumber*1/2) generateImage(i, "tabletCol1")
+    else if(i > maxImageNumber*1/2 && i <= maxImageNumber) generateImage(i, "tabletCol2")
+    else console.error("ERR : while generating image (tablet gallery)")
 }
 
 // desktop gallery 
+for(var i = minImageNumber; i <= maxImageNumber; i++)
+{
+    if(i <= maxImageNumber*1/3) generateImage(i, "desktopCol1")
+    else if(i > maxImageNumber*1/3 && i <= maxImageNumber*2/3) generateImage(i, "desktopCol2")
+    else if(i > maxImageNumber*2/3 && i <= maxImageNumber) generateImage(i, "desktopCol3")
+    else console.error("ERR : while generating image (desktop gallery)")
+}
+// GENERATING IMAGE GALLERY
 
-// col-desktop-1
-for(var i = minImageNumber; i <= maxImageNumber*1/3; i++)
-{
-    var img = document.createElement('img')
-    var imgSrc = "../assets/img4/" + i + ".jpg"
-    img.src = imgSrc
-    img.id = i
-    img.setAttribute("onclick", "displayLightbox(this.id)") 
-    imageContainerDesktopColumn1.appendChild(img)
-}
-// col-desktop-2
-for(var i = maxImageNumber*1/3 + 1; i <= maxImageNumber*2/3; i++)
-{
-    var img = document.createElement('img')
-    var imgSrc = "../assets/img4/" + i + ".jpg"
-    img.src = imgSrc
-    img.id = i
-    img.setAttribute("onclick", "displayLightbox(this.id)") 
-    imageContainerDesktopColumn2.appendChild(img)
-}
-// col-desktop-3
-for(var i = maxImageNumber*2/3 + 1; i <= maxImageNumber; i++)
-{
-    var img = document.createElement('img')
-    var imgSrc = "../assets/img4/" + i + ".jpg"
-    img.src = imgSrc
-    img.id = i
-    img.setAttribute("onclick", "displayLightbox(this.id)") 
-    imageContainerDesktopColumn3.appendChild(img)
-}
 
-// (Lightbox Logic)
+// LIGHTBOX LOGIC
 const child = document.querySelectorAll(".child")
 const body = document.querySelector('body')
 const lightBoxTitle = document.querySelector(".lightboxTitle")
@@ -91,21 +69,18 @@ function displayLightbox (imageIndex)
     // open the lightbox    
     lightBox.style.display = "flex"
     body.style.overflow = "hidden"
-    
 }
 
-//   close the lightbox
+// close the lightbox
 function closeLightbox () 
 {
-
     var displayedImage = document.querySelector("#displayedImage")
     displayedImage.remove()
     lightBox.style.display = "none"
     body.style.overflow = "auto"
-    
 }
 
-//   add or change the image that displayed on the lightbox
+// add or change the image that displayed on the lightbox
 function changeImage(currentIndex)
 {
     var imageSrc = "../assets/img4/" + currentIndex + ".jpg"
@@ -117,10 +92,9 @@ function changeImage(currentIndex)
     lightBoxTitle.innerHTML = title
 }
 
-//   for the onclick next image button
+// for the onclick next image button
 function nextImage ()
 {
-
     // reset the image that displayed before
     var displayedImage = document.querySelector("#displayedImage")
     displayedImage.remove()
@@ -133,14 +107,12 @@ function nextImage ()
     {
         activeImageIndex = minImageNumber
         changeImage(activeImageIndex)
-    }
-    else changeImage(activeImageIndex)
+    } else changeImage(activeImageIndex)
 }
 
-//   for the onclick previous image button
+// for the onclick previous image button
 function previousImage ()
 {
-    
     // reset the image that displayed before
     var displayedImage = document.querySelector("#displayedImage")
     displayedImage.remove()
@@ -153,10 +125,9 @@ function previousImage ()
     {
         activeImageIndex = maxImageNumber
         changeImage(activeImageIndex)
-    }
-    else changeImage(activeImageIndex)
+    } else changeImage(activeImageIndex)
 }
-// (Lightbox Logic)
+// LIGHTBOX LOGIC
 
 
 // ANIMATE ON SCROLL 
@@ -171,24 +142,17 @@ const elInView = (el, offset) => {
     return (
         elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
     )
-};
-
-const addAnimation = (el) => {
-    el.classList.add("animationScrolled")
-};
-
-const removeAnimation = (el) => {
-    el.classList.remove("animationScrolled")
 }
+
+const addAnimation = (el) => el.classList.add("animationScrolled")
+
+const removeAnimation = (el) => el.classList.remove("animationScrolled")
 
 const runAnimation = () => {
    aosImages.forEach(aosImage => {
-       if(elInView(aosImage, 200))
-       {
-           addAnimation(aosImage)
-       }
+       if(elInView(aosImage, 200)) addAnimation(aosImage)
    })
-};
+}
 
 window.addEventListener("scroll", () => {
     runAnimation()

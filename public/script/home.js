@@ -13,7 +13,7 @@ const ageLocationList = ['17, surabaya', '20, DKI jakarta', '19, padang', '25, b
 const wordToSayList = ['Cukup bermanfaat platformnya', 'Nice concept, I love it. Mungkin bakal ngerekomendasiin temen buat cek platform ini', 'Platform yang bagus, memotivasi saya menjadi lebih semangat dalam menjalankan pekerjaan saya saat ini', 'Tempat yang bagus untuk menyalurkan hasil jepretan saya', 'Terima Kasih. Karena platform ini, hasil foto saya tidak tersimpan begitu saja. Tetapi bisa dibagikan pada tempatnya', 'Hatur Nuhun buat foundernya']
 
 // make card function
-const createCard = (index, device) => {
+const generateCard = (index, device) => {
     
     // make topSection element and add class
     const topSection = document.createElement("div")
@@ -54,7 +54,7 @@ const createCard = (index, device) => {
 
     // MAKE CARD ELEMENT AND ADD CLASS
     const card = document.createElement("div")
-    card.classList.add("card-flex")
+    card.classList.add("card")
 
     // APPEND ALL CARD CHILD ELEMENT
     card.appendChild(topSection)
@@ -67,29 +67,28 @@ const createCard = (index, device) => {
     else if (device === "desktop1") containerDesktop1.appendChild(card)   
     else if (device === "desktop2") containerDesktop2.appendChild(card)   
     else if (device === "desktop3") containerDesktop3.appendChild(card)   
-    else console.error("ERR : unknown device argument createCard()")
+    else console.error("ERR : unknown device argument generateCard()")
 }
 
 // MOBILE CARD
-for(var i = minCard; i <= maxCard; i++) {createCard(i, "mobile")}
+for(var i = minCard; i <= maxCard; i++) {generateCard(i, "mobile")}
 
 // TABLET CARD
 for (var i = minCard; i <= maxCard; i++)
 {
-    if(i <= maxCard/2) createCard(i, "tablet1")
-    else if (i > maxCard/2 && i <= maxCard ) createCard(i, "tablet2")
+    if(i <= maxCard/2) generateCard(i, "tablet1")
+    else if (i > maxCard/2 && i <= maxCard ) generateCard(i, "tablet2")
     else console.error("ERR : while generating tablet card")
 }
 
 // DESKTOP CARD 
 for (var i = minCard; i <= maxCard; i++)
 {
-    if(i <= maxCard/3) createCard(i, "desktop1")
-    else if (i > maxCard/3 && i <= maxCard*2/3) createCard(i, "desktop2")
-    else if (i > maxCard*2/3 && i <= maxCard) createCard(i, "desktop3")
+    if(i <= maxCard/3) generateCard(i, "desktop1")
+    else if (i > maxCard/3 && i <= maxCard*2/3) generateCard(i, "desktop2")
+    else if (i > maxCard*2/3 && i <= maxCard) generateCard(i, "desktop3")
     else console.error("ERR : while generating desktop card")
 }
-
 
 
 // ANIMATE ON SCROLL
@@ -100,65 +99,46 @@ const dataChilds = document.querySelectorAll(".data .data-child")
 const dataIcons = document.querySelectorAll(".data .fas")
 const dataNumberElements = document.querySelectorAll(".data .data-number")
 const whatTheySayTitle = document.querySelector(".whatTheySay h1")
-const cardsFlex = document.querySelectorAll(".card-flex")
+const cards = document.querySelectorAll(".card")
 
 // offset for customize on what height I want to make the animation active
 const elInView = (el, offset) => {
-    let elementTop = el.getBoundingClientRect().top; 
+    let elementTop = el.getBoundingClientRect().top
     
     // return true of false
     return (
         elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
     )
-};
-
-const addAnimation = (el) => {
-    el.classList.add("animationScrolled")
-};
-
-const removeAnimation = (el) => {
-    el.classList.remove("animationScrolled")
 }
 
+const addAnimation = (el) => el.classList.add("animationScrolled")
+
+const removeAnimation = (el) => el.classList.remove("animationScrolled")
+
 const runAnimation = () => {
-    if(elInView(aboutUsTitle, 100))
-    {
-        addAnimation(aboutUsTitle)
-    }
-    if (elInView(aboutUsLine, 100))
-    {
-        addAnimation(aboutUsLine)
-    }
-    if (elInView(whatTheySayTitle, 100))
-    {
-        addAnimation(whatTheySayTitle)
-    }
+    if(elInView(aboutUsTitle, 100)) addAnimation(aboutUsTitle)
+    if (elInView(aboutUsLine, 100)) addAnimation(aboutUsLine)
+    if (elInView(whatTheySayTitle, 100)) addAnimation(whatTheySayTitle)
+
+    // I keep all the forEach function above with normal syntax (not a one liner), because I want to keep it readable  
+
     aboutUsContents.forEach(aboutUsContent => {
-        if(elInView(aboutUsContent, 100)){
-            addAnimation(aboutUsContent)
-        }
+        if(elInView(aboutUsContent, 100)) addAnimation(aboutUsContent)
     })
 
     dataIcons.forEach(dataIcon => {
-        if(elInView(dataIcon, 100)){
-            addAnimation(dataIcon)
-        }
+        if(elInView(dataIcon, 100)) addAnimation(dataIcon)
     })
 
     // the counting animation
     dataNumberElements.forEach(dataNumber => {
-        if(elInView(dataNumber, 0)){
-            addAnimation(dataNumber)
-        }
+        if(elInView(dataNumber, 0)) addAnimation(dataNumber)
     })
     
-    cardsFlex.forEach(cardFlex => {
-        if(elInView(cardFlex, 200))
-        {
-            addAnimation(cardFlex)
-        }
+    cards.forEach(card => {
+        if(elInView(card, 200)) addAnimation(card)
     })
-};
+}
 
 window.addEventListener("scroll", () => {
     runAnimation()
@@ -179,21 +159,17 @@ window.addEventListener("scroll", () => {
                 {
                     number.innerText = count + increment
                     setTimeout(updateCount, 200)
-                }
-                else 
-                {
-                    number.innerText = target
-                }
+                }else number.innerText = target
+
             }
     
             // run the function
             updateCount()
-        });
+        })
     } 
 
     setTimeout(activateCount, 750)
-
-});
-
+})
+// ANIMATE ON SCROLL
 
 

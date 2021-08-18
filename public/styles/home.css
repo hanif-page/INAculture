@@ -203,7 +203,7 @@ main .data
     display: none; 
 }
 
-.card-flex 
+.card 
 {
     width: 100%;
     max-height: 300px;
@@ -215,19 +215,19 @@ main .data
     cursor: default;
 }
 
-.card-flex:hover 
+.card:hover 
 {
     box-shadow: 0 0 24px rgba(0,0,0,.48);
 }
 
-.card-flex .top-section, 
-.card-flex .bottom-section
+.card .top-section, 
+.card .bottom-section
 {
     padding: 24px;
     width: 100%;
 }
 
-.card-flex .top-section
+.card .top-section
 {
     color: #333;
     background: #fff;
@@ -240,7 +240,7 @@ main .data
     grid-row: span 3 / span 3;
 }
 
-.card-flex .top-section .profilePict
+.card .top-section .profilePict
 {
     width: 80px;
     height: 80px;
@@ -250,21 +250,21 @@ main .data
     margin-bottom: 1rem;
 }
 
-.card-flex .top-section .caption h2 
+.card .top-section .caption h2 
 {
     font-weight: 600;
     font-size: 1.2em;
     text-transform: capitalize;
 }
 
-.card-flex .top-section .caption h3 
+.card .top-section .caption h3 
 {
     font-weight: 300;
     font-size: 1em;
     text-transform: capitalize;
 }
 
-.card-flex .bottom-section
+.card .bottom-section
 {
     background: var(--dark-green);
     border-bottom-left-radius: 20px;
@@ -275,7 +275,7 @@ main .data
     grid-row: span 3 / span 3;
 }
 
-.card-flex .bottom-section p
+.card .bottom-section p
 {
     width: 100%;
     color: white;
@@ -418,7 +418,7 @@ main .data
         font-size: 1em;
     }
 
-    .card-flex .bottom-section p
+    .card .bottom-section p
     {
         font-size: 1em;
     }
@@ -514,14 +514,14 @@ main .data
     transform: translateY(0);
 }
 
-.card-flex 
+.card 
 {   
     opacity: 0;
     transform: translateY(30px);
     transition: all 1.5s;
 }
 
-.card-flex.animationScrolled
+.card.animationScrolled
 {   
     opacity: 1;
     transform: translateY(0);

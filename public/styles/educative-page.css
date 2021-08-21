@@ -45,11 +45,17 @@ main p span
     text-transform: capitalize;
 }
 
+main .arrow-container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main .arrow
 {
     font-size: 2.5em;
     margin: 4rem 0;
-    display: block;
     text-align: center;
     color: var(--white);
 }
@@ -316,7 +322,7 @@ main .source a:hover
     0%
     {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
     100%
     {
@@ -330,7 +336,7 @@ main .source a:hover
     0%
     {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateY(30px);
     }
     100%
     {
@@ -357,7 +363,7 @@ main .source a:hover
 .aosText .paragraph
 {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
     transition: all 1s .75s;
 }
 
@@ -370,7 +376,7 @@ main .source a:hover
 .imgContainer 
 {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateY(30px);
     transition: all 1s 1s;
 }
 

@@ -58,8 +58,6 @@ header
     background: var(--dark-green);
     display: flex;
     flex-direction: column;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 }
 
 .headerContent 
@@ -135,8 +133,6 @@ header
     text-align: right;
     transform: translateY(-200px);
     transition: all .5s ease-in-out;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 }
 .mobileNav.openNav 
 {
@@ -201,7 +197,7 @@ footer
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 1rem;
 }
 

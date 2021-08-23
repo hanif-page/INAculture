@@ -1,10 +1,19 @@
 main
 {
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 7rem 0;
 }
 
@@ -20,16 +29,24 @@ main h1
 
 main .image-container-mobile
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 main .image-container-mobile img 
 {
     width: 90%;
     margin-bottom: 1rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 main .image-container-tablet 
@@ -67,7 +84,6 @@ main .image-container-desktop
 {
     color: var(--black);
     font-weight: 400;
-    /* font-size: 1em; */
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -167,10 +183,19 @@ main .scrollMe
     z-index: 80;
     inset: 0;
     padding: 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 3em;
     font-weight: 700;
     color: var(--black);
@@ -178,10 +203,19 @@ main .scrollMe
 
 main .scrollIcon
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 2rem;
 }
 
@@ -203,10 +237,19 @@ main .scrollIcon .fas.fa-hand-pointer
 
 main .lineArrowContainer
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 main .mouseLine
@@ -238,8 +281,13 @@ main .lineArrowContainer .arrow
 
     main .image-container-tablet
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         width: 90%;
         margin: 0 auto;
     }
@@ -248,8 +296,13 @@ main .lineArrowContainer .arrow
     main .image-container-tablet #col-2
     {
         width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-right: 1rem;
     }
     
@@ -280,8 +333,13 @@ main .lineArrowContainer .arrow
 
     main .image-container-desktop 
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         width: 90%;
         margin: 0 auto;
     }
@@ -291,8 +349,13 @@ main .lineArrowContainer .arrow
     main .image-container-desktop #col-desktop-3
     {
         width: 33.3333%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-right: 1rem;
     }
 
@@ -358,26 +421,37 @@ main .lineArrowContainer .arrow
 main img 
 {
     opacity: .3;
-    transform: scale(.98);
+    -webkit-transform: scale(.98);
+        -ms-transform: scale(.98);
+            transform: scale(.98);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
 }
 
 main img.animationScrolled
 {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 /* ANIMATE ON SCROLL */
 
 main img.animationScrolled 
 {
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
     cursor: pointer;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 main img.animationScrolled:hover 
 {
     opacity: .8;
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
 }

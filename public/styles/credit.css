@@ -13,20 +13,38 @@
 .main-container
 {
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .secondary-container
 {
     padding: 2rem 0;
     min-height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 
@@ -34,7 +52,8 @@
 {
     width: 100%;
     min-height: 300px;
-    box-shadow: 0 0 30px rgba(0,0,0,.30);
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,.30);
+            box-shadow: 0 0 30px rgba(0,0,0,.30);
     border-radius: 20px;
 }
 
@@ -45,10 +64,19 @@
 
 .profile-card-child1
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .profile-card-child2
@@ -68,10 +96,19 @@
 
 .title-and-pict
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .title-and-pict h1
@@ -86,8 +123,10 @@
 {
     width: 120px;
     height: 120px;
-    object-position: 40%;
-    object-fit: cover;
+    -o-object-position: 40%;
+       object-position: 40%;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 50%;
     margin-top: 1.2rem;
     background: var(--orange);
@@ -95,10 +134,19 @@
 
 .caption 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 2rem;
 }
 
@@ -121,9 +169,16 @@
 
 .profile-contact 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 2rem;
 }
 
@@ -132,6 +187,8 @@
     color: var(--white);
     font-size: 2.5em;
     margin: 0 .4rem;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
     transition: color .5s;
 }
 
@@ -151,6 +208,8 @@
     font-weight: 600;
     text-decoration: underline;
     text-transform: capitalize;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
     transition: color .5s;
     display: inline-block;
 }
@@ -167,8 +226,13 @@
 
 .photosIcon div 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .photosIcon h2, .tools h2 
@@ -280,6 +344,8 @@ footer .bottom .copyright a:hover
 
     .profile-card
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 75%;
         margin-top: 120px;
@@ -296,10 +362,19 @@ footer .bottom .copyright a:hover
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .profile-card-child2 p
@@ -309,7 +384,9 @@ footer .bottom .copyright a:hover
 
     .profile-contact
     {
-        align-items: flex-end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
     }
 
     main .photosIcon h3, main .tools h3 
@@ -341,9 +418,16 @@ footer .bottom .copyright a:hover
     main .secondary-container
     {
         min-height: 30vh;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .tools-name 
@@ -353,7 +437,9 @@ footer .bottom .copyright a:hover
 
     .photosIcon 
     {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
     .photosIcon h2 
@@ -363,7 +449,10 @@ footer .bottom .copyright a:hover
 
     .photosIcon div 
     {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     .photosIcon a 
@@ -378,6 +467,8 @@ footer .bottom .copyright a:hover
 
     .tools ul 
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -399,25 +490,38 @@ footer .bottom .copyright a:hover
 .profile-card
 {
     /* shadow animation */
-    animation: profileCardAnimation 5s infinite;
+    -webkit-animation: profileCardAnimation 5s infinite;
+            animation: profileCardAnimation 5s infinite;
+}
+
+@-webkit-keyframes profileCardAnimation {
+    0%{}
+    50%{-webkit-box-shadow: 0 0 50px rgba(0,0,0,.50);box-shadow: 0 0 50px rgba(0,0,0,.50);}
+    100%{}
 }
 
 @keyframes profileCardAnimation {
     0%{}
-    50%{box-shadow: 0 0 50px rgba(0,0,0,.50);}
+    50%{-webkit-box-shadow: 0 0 50px rgba(0,0,0,.50);box-shadow: 0 0 50px rgba(0,0,0,.50);}
     100%{}
 }
 
 /* ANIMATE ON SCROLL */
 .tools-name 
 {
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
     transition: all 1.5s;
     opacity: 0;
-    transform: translateY(1.5rem);
+    -webkit-transform: translateY(1.5rem);
+        -ms-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
 }
 
 .tools-name.animationScrolled
 {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
 }

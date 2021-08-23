@@ -18,7 +18,8 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -56,16 +57,27 @@ header
     width: 100%;
     height: 80px;
     background: var(--dark-green);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .headerContent 
 {
     height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .headerContent h1 a
@@ -86,12 +98,16 @@ header
     width: 50px;
     border-radius: 5px;
     background: var(--white);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
 .headerContent .hamburger div:nth-child(1)
 {
-    transform-origin: center;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
 }
 
 .headerContent .hamburger div:nth-child(2)
@@ -101,23 +117,31 @@ header
 
 .headerContent .hamburger div:nth-child(3)
 {
-    transform-origin: center;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
 }
 
 
 .headerContent .hamburger.openNav div:nth-child(1)
 {
-    transform: rotate(45deg) translateX(8px)
+    -webkit-transform: rotate(45deg) translateX(8px);
+        -ms-transform: rotate(45deg) translateX(8px);
+            transform: rotate(45deg) translateX(8px)
 }
 .headerContent .hamburger.openNav div:nth-child(2)
 {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
     opacity: 0;
     margin: 0;
 }
 .headerContent .hamburger.openNav div:nth-child(3)
 {
-    transform: rotate(-45deg) translateX(8px)
+    -webkit-transform: rotate(-45deg) translateX(8px);
+        -ms-transform: rotate(-45deg) translateX(8px);
+            transform: rotate(-45deg) translateX(8px)
 }
 
 .mobileNav
@@ -126,17 +150,23 @@ header
     min-height: 200px;
     padding-bottom: 1.5rem;
     position: fixed;
-    z-index: 40;
+    z-index: 90;
     display: block;
     background: var(--dark-green);
     text-transform: capitalize;
     text-align: right;
-    transform: translateY(-200px);
+    -webkit-transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 .mobileNav.openNav 
 {
-    transform: translateY(64px);
+    -webkit-transform: translateY(64px);
+        -ms-transform: translateY(64px);
+            transform: translateY(64px);
 }
 
 .mobileNav ul li 
@@ -149,6 +179,8 @@ header
     color: var(--white);
     font-weight: 500;
     font-size: 1.2em;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -164,6 +196,8 @@ header
     padding: .3rem .6rem;
     border-radius: 5px;
     border: 1px solid var(--white);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -180,6 +214,8 @@ header
     padding: .5rem 1rem;
     border-radius: 5px;
     border: 1px solid var(--white);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -194,9 +230,16 @@ footer
 {
     background: var(--light-green);
     color: var(--white);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 3rem;
     padding-bottom: 1rem;
 }
@@ -222,6 +265,8 @@ footer a
 {
     font-weight: 700;
     color: var(--white);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -232,8 +277,13 @@ footer a:hover
 
 .middle 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 /* a space for each section */
@@ -245,9 +295,16 @@ footer a:hover
 /* share list (wa, twt, and tele) */
 .middle .share ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* share list child */
@@ -273,8 +330,12 @@ footer a:hover
 /* social media list */
 .middle .reachUs .social ul 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 /* social media icon */
@@ -346,7 +407,6 @@ footer a:hover
     {
         font-size: 1.2em;
     }
-
 }
 
 /* 768px above breakpoints (big tablet) */
@@ -368,13 +428,19 @@ footer a:hover
     /* list parent of the desktop nav */
     .desktopNav ul 
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     /* desktop nav list child */
     .desktopNav ul li a
     {
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
         transition: all .3s;
         color: var(--white);
         font-weight: 500;
@@ -395,9 +461,16 @@ footer a:hover
     /* change the layout of the middle section in the footer */
     .middle 
     {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         width: 100%
     }
 
@@ -410,8 +483,13 @@ footer a:hover
     /* Share list parent (wa, twt, and tele) | change the list layout */
     .middle .share ul
     {
-        flex-direction: row;
-        justify-content: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         margin: 1rem 0;
     }
 
@@ -442,7 +520,9 @@ footer a:hover
     /* social media icon | make the position stick to the end */
     .middle .reachUs .social ul 
     {
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
     } 
 
     /* space between 3 social media list child */
@@ -450,7 +530,6 @@ footer a:hover
     {
         margin: 0 2rem;
     }
-
 }
 
 /* 1024px above breakpoints (desktop) */
@@ -491,5 +570,4 @@ footer a:hover
     {
         font-size: 1.2em;
     }
-
 }

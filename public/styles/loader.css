@@ -4,9 +4,15 @@
     inset: 0;
     z-index: 9999;
     background: var(--green);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .loadingSpin
@@ -17,18 +23,35 @@
     border-radius: 50%;
     border: 5px solid var(--white);
     border-top: 5px solid var(--green);
-    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+            animation: spin 1s ease-in-out infinite;
     border-radius: 50%;
+}
+
+@-webkit-keyframes spin 
+{
+    0% 
+    {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% 
+    {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 }
 
 @keyframes spin 
 {
     0% 
     {
-        transform: rotate(0);
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
     }
     100% 
     {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }

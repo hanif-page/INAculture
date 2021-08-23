@@ -1,10 +1,19 @@
 main
 {
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 7rem 0;
 }
 
@@ -20,16 +29,24 @@ main h1
 
 main .image-container-mobile
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 main .image-container-mobile img 
 {
     width: 90%;
     margin-bottom: 1rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 main .image-container-tablet 
@@ -42,77 +59,7 @@ main .image-container-desktop
     display: none;
 }
 
-/* Tablet Size (2 column gallery) */
-@media screen and (min-width: 576px)
-{
-    main .image-container-mobile
-    {
-        display: none;
-    }
-    main .image-container-mobile img 
-    {
-        margin: 0;
-        width: 100%;
-    }
-    main .image-container-tablet
-    {
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        margin: 0 auto;
-    } 
-    main .image-container-tablet #col-1,
-    main .image-container-tablet #col-2
-    {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        margin-right: 1rem;
-    }
-    main .image-container-tablet #col-1 img,
-    main .image-container-tablet #col-2 img
-    {
-        margin-bottom: 1rem;
-    }
-
-}
-
-/* Desktop Size (3 column gallery) */
-@media screen and (min-width: 992px)
-{
-    main .image-container-tablet 
-    {
-        display: none;
-    }
-
-    main .image-container-desktop 
-    {
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    main .image-container-desktop #col-desktop-1,
-    main .image-container-desktop #col-desktop-2,
-    main .image-container-desktop #col-desktop-3
-    {
-        width: 33.3333%;
-        display: flex;
-        flex-direction: column;
-        margin-right: 1rem;
-    }
-
-    main .image-container-desktop #col-desktop-1 img,
-    main .image-container-desktop #col-desktop-2 img,
-    main .image-container-desktop #col-desktop-3 img 
-    {
-        margin-bottom: 1rem;
-    }
-
-}
-
-/* lightbox and desktop gallery style */
+/* lightbox */
 .lightbox 
 {
     position: fixed;
@@ -137,7 +84,6 @@ main .image-container-desktop
 {
     color: var(--black);
     font-weight: 400;
-    /* font-size: 1em; */
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -203,6 +149,246 @@ main .image-container-desktop
             transform: translateY(-50%);
 }
 
+#previous, #next 
+{
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 10px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    color: var(--white);
+}
+
+#previous:hover, #next:hover 
+{
+    color: var(--orange);
+}
+
+#next
+{
+    right: 0;
+}
+/* lightbox */
+
+main .scrollMe 
+{
+    position: fixed;
+    z-index: 80;
+    inset: 0;
+    padding: 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--black);
+}
+
+main .scrollIcon
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem;
+}
+
+main .scrollIcon .fas
+{
+    margin-bottom: .5rem;
+    font-size: .7em;
+}
+
+main .fa-mouse
+{
+    display: none;
+}
+
+main .scrollIcon .fas.fa-hand-pointer
+{
+    margin-right: 6px;
+}
+
+main .lineArrowContainer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+main .mouseLine
+{
+    width: 3px;
+    height: 200px;
+    background: var(--black);
+}
+
+main .lineArrowContainer .arrow 
+{
+    margin-top: -20px;
+    font-size: .7em;
+}
+
+/* Tablet Size (2 column gallery) */
+@media screen and (min-width: 576px)
+{
+    main .image-container-mobile
+    {
+        display: none;
+    }
+
+    main .image-container-mobile img 
+    {
+        margin: 0;
+        width: 100%;
+    }
+
+    main .image-container-tablet
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    main .image-container-tablet #col-1,
+    main .image-container-tablet #col-2
+    {
+        width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-right: 1rem;
+    }
+    
+    main .image-container-tablet #col-1 img,
+    main .image-container-tablet #col-2 img
+    {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 768px)
+{
+    #display
+    {
+        max-width: 70%;
+        height: 90vh;
+    }
+}
+
+/* Desktop Size (3 column gallery) */
+@media screen and (min-width: 992px)
+{
+    main .image-container-tablet 
+    {
+        display: none;
+    }
+
+    main .image-container-desktop 
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    main .image-container-desktop #col-desktop-1,
+    main .image-container-desktop #col-desktop-2,
+    main .image-container-desktop #col-desktop-3
+    {
+        width: 33.3333%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-right: 1rem;
+    }
+
+    main .image-container-desktop #col-desktop-1 img,
+    main .image-container-desktop #col-desktop-2 img,
+    main .image-container-desktop #col-desktop-3 img 
+    {
+        margin-bottom: 1rem;
+    }
+
+    #display 
+    {
+        max-width: 50%;
+        
+    }
+    
+    #display img 
+    {
+        -o-object-position: 50% 20%;
+           object-position: 50% 20%;
+    }
+
+    main .fa-mouse
+    {
+        display: block;
+    }
+
+    main .fa-hand-pointer
+    {
+        display: none;
+    }
+}
+
 @-webkit-keyframes spin 
 {
     0% 
@@ -231,100 +417,41 @@ main .image-container-desktop
     }
 }
 
-#previous, #next 
-{
-    font-size: 2em;
-    cursor: pointer;
-    position: absolute;
-    z-index: 3;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    margin: 10px;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-    color: var(--white);
-}
-
-#previous:hover, #next:hover 
-{
-    color: var(--orange);
-}
-
-#next
-{
-    right: 0;
-}
-
-@media screen and (min-width: 768px)
-{
-    #display
-    {
-        max-width: 70%;
-        height: 90vh;
-    }
-}
-
-@media screen and (min-width: 992px)
-{
-    #display 
-    {
-        max-width: 50%;
-        
-    }
-    #display img 
-    {
-        -o-object-position: 50% 20%;
-           object-position: 50% 20%;
-    }
-}
-/* end -- lightbox and desktop gallery style */
-
-
 /* ANIMATE ON SCROLL */
-main .scrollMe 
-{
-    position: fixed;
-    z-index: 80;
-    inset: 0;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: grid; */
-    /* place-items: center; */
-    text-transform: capitalize;
-    text-align: center;
-    font-size: 5em;
-    font-weight: 700;
-    color: var(--black);
-}
-
 main img 
 {
     opacity: .3;
-    transform: scale(.98);
+    -webkit-transform: scale(.98);
+        -ms-transform: scale(.98);
+            transform: scale(.98);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
 }
 
 main img.animationScrolled
 {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 /* ANIMATE ON SCROLL */
 
 main img.animationScrolled 
 {
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
     cursor: pointer;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 main img.animationScrolled:hover 
 {
     opacity: .8;
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
 }

@@ -2,6 +2,8 @@ main
 {
     padding-top: 7.5rem;
     padding-bottom: 1rem;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,.6)), to(rgba(0,0,0,.6))), url(../../assets/img3/hero-bg-2.jpg);
+    background: -o-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../../assets/img3/hero-bg-2.jpg);
     background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../../assets/img3/hero-bg-2.jpg);
     background-position: center;
     background-size: cover;
@@ -47,9 +49,15 @@ main p span
 
 main .arrow-container 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 main .arrow
@@ -62,13 +70,15 @@ main .arrow
 
 main .arrow .fa-arrow-down 
 {
-    animation: arrowDownAnimation 1s ease-in infinite;
+    -webkit-animation: arrowDownAnimation 1s ease-in infinite;
+            animation: arrowDownAnimation 1s ease-in infinite;
 }
 
 
 main .arrow .fa-arrow-up 
 {
-    animation: arrowUpAnimation 1s ease-in infinite;
+    -webkit-animation: arrowUpAnimation 1s ease-in infinite;
+            animation: arrowUpAnimation 1s ease-in infinite;
 }
 
 .indonesia, .budayaIndonesia, .alamIndonesia 
@@ -76,10 +86,19 @@ main .arrow .fa-arrow-up
     min-height: 100vh;
     padding-top: 3rem;
     scroll-margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .indonesiaText, .budayaIndonesiaText, .alamIndonesiaText
@@ -105,7 +124,9 @@ main .arrow .fa-arrow-up
 
 .imgContainer img:hover
 {
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
 }
 
 .imgContainer h3 
@@ -122,9 +143,16 @@ main .arrow .fa-arrow-up
 {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
     transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 
@@ -139,6 +167,8 @@ main .source a
     text-decoration: underline;
     color: var(--white);
     font-weight: 700;
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
     transition: color .3s;
 }
 
@@ -223,8 +253,13 @@ main .source a:hover
 
     .indonesia, .budayaIndonesia, .alamIndonesia   
     {
-        flex-direction: row;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         scroll-margin-top: -2rem;
         /* scroll-margin-top: 8rem; */
     } 
@@ -249,21 +284,68 @@ main .source a:hover
     }
 }
 
-@keyframes arrowDownAnimation 
+@-webkit-keyframes arrowDownAnimation 
 {
     0% 
     {
-        transform: translate(0);
+        -webkit-transform: translate(0);
+                transform: translate(0);
         opacity: .5;
     }
     50% 
     {
-        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px);
         opacity: 1;
     }
     100% 
     {
-        transform: translate(0);
+        -webkit-transform: translate(0);
+                transform: translate(0);
+        opacity: .5;
+    }
+}
+
+@keyframes arrowDownAnimation 
+{
+    0% 
+    {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+        opacity: .5;
+    }
+    50% 
+    {
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px);
+        opacity: 1;
+    }
+    100% 
+    {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+        opacity: .5;
+    }
+}
+
+@-webkit-keyframes arrowUpAnimation 
+{
+    0% 
+    {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+        opacity: .5;
+    }
+    50% 
+    {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+        opacity: 1;
+    }
+    100% 
+    {
+        -webkit-transform: translate(0);
+                transform: translate(0);
         opacity: .5;
     }
 }
@@ -272,17 +354,20 @@ main .source a:hover
 {
     0% 
     {
-        transform: translate(0);
+        -webkit-transform: translate(0);
+                transform: translate(0);
         opacity: .5;
     }
     50% 
     {
-        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
         opacity: 1;
     }
     100% 
     {
-        transform: translate(0);
+        -webkit-transform: translate(0);
+                transform: translate(0);
         opacity: .5;
     }
 }
@@ -290,17 +375,36 @@ main .source a:hover
 /* animation after the page is loaded */
 .indonesia h2  
 {
-    animation: postloadAnimationTitle 1s;
+    -webkit-animation: postloadAnimationTitle 1s;
+            animation: postloadAnimationTitle 1s;
 }
 
 .indonesia .paragraph
 {
-    animation: postloadAnimationParagraph 1s;
+    -webkit-animation: postloadAnimationParagraph 1s;
+            animation: postloadAnimationParagraph 1s;
 }
 
 .indonesia iframe 
 {
-    animation: postloadAnimationMap 1s;
+    -webkit-animation: postloadAnimationMap 1s;
+            animation: postloadAnimationMap 1s;
+}
+
+@-webkit-keyframes postloadAnimationTitle 
+{
+    0% 
+    {
+        opacity: 0;
+        -webkit-transform: translateX(-30px);
+                transform: translateX(-30px);
+    }
+    100%
+    {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
 @keyframes postloadAnimationTitle 
@@ -308,12 +412,30 @@ main .source a:hover
     0% 
     {
         opacity: 0;
-        transform: translateX(-30px);
+        -webkit-transform: translateX(-30px);
+                transform: translateX(-30px);
     }
     100%
     {
         opacity: 1;
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes postloadAnimationParagraph
+{
+    0%
+    {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+    }
+    100%
+    {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
 }
 
@@ -322,12 +444,30 @@ main .source a:hover
     0%
     {
         opacity: 0;
-        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
     }
     100%
     {
         opacity: 1;
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes postloadAnimationMap
+{
+    0%
+    {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+    }
+    100%
+    {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 }
 
@@ -336,12 +476,14 @@ main .source a:hover
     0%
     {
         opacity: 0;
-        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
     }
     100%
     {
         opacity: 1;
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 }
 /* animation after the page is loaded */
@@ -350,39 +492,57 @@ main .source a:hover
 .aosText h2
 {
     opacity: 0;
-    transform: translateX(-30px);
+    -webkit-transform: translateX(-30px);
+        -ms-transform: translateX(-30px);
+            transform: translateX(-30px);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
 }
 
 .aosText h2.animationScrolled 
 {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
 .aosText .paragraph
 {
     opacity: 0;
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition: all 1s .75s;
+    -o-transition: all 1s .75s;
     transition: all 1s .75s;
 }
 
 .aosText .paragraph.animationScrolled
 {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
 }
 
 .imgContainer 
 {
     opacity: 0;
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition: all 1s 1s;
+    -o-transition: all 1s 1s;
     transition: all 1s 1s;
 }
 
 .imgContainer.animationScrolled
 {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 /* ANIMATE ON SCROLL */
